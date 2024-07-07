@@ -14,5 +14,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 				<MantineProvider defaultColorScheme="auto">{children}</MantineProvider>
 			</body>
 		</html>
+		//test
 	);
 }
