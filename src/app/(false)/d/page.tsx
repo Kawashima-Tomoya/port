@@ -2,7 +2,7 @@ import c from "./page.module.css";
 
 import { Paper } from "@mantine/core";
 import Link from "next/link";
-import { User } from "~/components/User";
+import { User } from "~/components/page/Dashboard/User";
 
 export default function Page() {
 	return (

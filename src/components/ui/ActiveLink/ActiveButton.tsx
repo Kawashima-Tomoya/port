@@ -6,12 +6,12 @@ import {
 	type PolymorphicComponentProps,
 } from "@mantine/core";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 type Props = PolymorphicComponentProps<typeof Link, ButtonProps>;
 
 export function ActiveButton(buttonProps: Props) {
-	const pathname = usePathname();
+	const pathname = useRouter();
 	const isActive = buttonProps.href === pathname;
 
 	return (

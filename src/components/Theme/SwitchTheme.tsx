@@ -2,6 +2,7 @@
 
 import { Switch, type SwitchProps, useMantineTheme } from "@mantine/core";
 import { IconMoon, IconSun } from "@tabler/icons-react";
+import c from "./SwitchTheme.module.css";
 import { useMountedColorScheme } from "./useMountedColorScheme";
 
 export function SwitchTheme(props: SwitchProps) {
@@ -10,12 +11,13 @@ export function SwitchTheme(props: SwitchProps) {
 
 	return (
 		<Switch
-			size="md"
+			unstyled={true}
+			className={c.switch}
 			onChange={toggleColorScheme}
 			checked={colorScheme === "dark"}
 			disabled={colorScheme === undefined}
-			onLabel={<IconSun size={16} color={theme.colors.yellow[4]} />}
-			offLabel={<IconMoon size={16} color={theme.colors.blue[6]} />}
+			onLabel={<IconSun size={20} color={theme.colors.yellow[4]} />}
+			offLabel={<IconMoon size={20} color={theme.colors.blue[6]} />}
 			{...props}
 		/>
 	);

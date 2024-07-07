@@ -7,9 +7,9 @@ import {
 	IconDashboard,
 } from "@tabler/icons-react";
 import Link from "next/link";
-import { ActiveNavLink } from "~/components/ActiveLink/ActiveNavLink";
 import { ActionThemeIcon } from "~/components/Theme/ActionThemeIcon";
-import { User } from "~/components/User";
+import { User } from "~/components/page/Dashboard/User";
+import { ActiveNavLink } from "~/components/ui/ActiveLink/ActiveNavLink";
 
 const data = [
 	{ link: "/d", label: "ダッシュボード", icon: IconDashboard },

@@ -1,0 +1,12 @@
+.container{
+  width: 13rem;
+  margin: 0;
+  padding: 0.5rem;
+  border: 1px blue solid;
+  border-radius: 7px;
+}
+
+.gridItem {
+  justify-items: center;
+  align-items: center;
+}

@@ -1,0 +1,7 @@
+.switch {
+  width: 20px;
+  height: 20PX;
+  input{
+  display: none;
+  }
+}
