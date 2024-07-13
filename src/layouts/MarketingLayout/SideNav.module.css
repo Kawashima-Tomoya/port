@@ -1,19 +1,8 @@
-.container{
-  width: 13rem;
-  border-radius: 30px;
-}
-
 .item{
   text-decoration: none;
-}
-
-.panel{
-  background-color: rgba(0, 0, 0, 10%);
-  /* background-color: var(--mantine-color-dark-9); */
+  overflow: hidden;
 }
 
 .link{
   text-decoration: none;
-  color: inherit;
-  white-space: pre-wrap;
 }

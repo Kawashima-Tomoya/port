@@ -1,4 +1,5 @@
 "use client";
+import { alpha } from "@mantine/core";
 import { Accordion, Text } from "@mantine/core";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -9,19 +10,19 @@ const links = [
 		href: "/",
 		emoji: "🏠",
 		label: "Top",
-		description: "\nよろしく！",
+		description: "よろしく！",
 	},
 	{
 		href: "/works",
 		emoji: "🎨",
 		label: "Works",
-		description: "\n少しずつ増やしていきたい",
+		description: "少しずつ増やしていきたい",
 	},
 	{
 		href: "/about",
 		emoji: "😎",
 		label: "About",
-		description: "\n自己紹介ページ",
+		description: "自己紹介ページ",
 	},
 ] as const;
 
@@ -39,7 +40,7 @@ export function SideNav() {
 					<Accordion.Control icon={link.emoji}>{link.label}</Accordion.Control>
 				)}
 			</Link>
-			<Accordion.Panel className={c.panel}>
+			<Accordion.Panel bg={alpha("var(--mantine-color-dark-9)", 0.2)}>
 				<Text size="sm">{link.description}</Text>
 			</Accordion.Panel>
 		</Accordion.Item>
@@ -47,7 +48,6 @@ export function SideNav() {
 
 	return (
 		<Accordion
-			className={c.container}
 			variant="contained"
 			defaultValue={pathname}
 			radius="md"
