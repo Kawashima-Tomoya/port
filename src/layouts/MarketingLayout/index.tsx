@@ -1,4 +1,4 @@
-import { Stack } from "@mantine/core";
+import { Container, Stack } from "@mantine/core";
 import c from "./index.module.css";
 
 import type { ReactNode } from "react";
@@ -8,7 +8,7 @@ import { SideNav } from "~/layouts/MarketingLayout/SideNav";
 
 export function MarketingLayout({ children }: { children: ReactNode }) {
 	return (
-		<div className={c.container}>
+		<Container className={c.container}>
 			<div className={c.mainContainer}>
 				<Stack h={400} bg="var(--mantine-color-body)" justify="start" gap="xs">
 					<IconLinks />
@@ -17,6 +17,6 @@ export function MarketingLayout({ children }: { children: ReactNode }) {
 				<main className={c.main}>{children}</main>
 			</div>
 			<Footer />
-		</div>
+		</Container>
 	);
 }
