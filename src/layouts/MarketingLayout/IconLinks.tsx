@@ -17,7 +17,7 @@ export function IconLinks() {
 					target="_blank"
 					rel="noopener noreferrer"
 					size="0"
-					c="var(--mantine-color-gray-text)"
+					c="var(--mantine-color-text)"
 				>
 					<XiconSvg />
 				</Anchor>
@@ -27,7 +27,7 @@ export function IconLinks() {
 					rel="noopener noreferrer"
 					underline="never"
 					size="0"
-					c="var(--mantine-color-gray-text)"
+					c="var(--mantine-color-text)"
 				>
 					<GithubSvg />
 				</Anchor>
@@ -37,7 +37,7 @@ export function IconLinks() {
 					rel="noopener noreferrer"
 					underline="never"
 					size="0"
-					c="var(--mantine-color-gray-text)"
+					c="var(--mantine-color-text)"
 				>
 					<AppleSvg />
 				</Anchor>
