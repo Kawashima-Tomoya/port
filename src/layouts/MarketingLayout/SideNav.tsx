@@ -1,6 +1,5 @@
 "use client";
-import { alpha } from "@mantine/core";
-import { Accordion, Text } from "@mantine/core";
+import { Accordion, Text, alpha } from "@mantine/core";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import c from "./SideNav.module.css";
@@ -33,7 +32,11 @@ export function SideNav() {
 		<Accordion.Item key={link.href} value={link.href} className={c.item}>
 			<Link href={link.href} className={c.link}>
 				{link.href === pathname ? (
-					<Accordion.Control icon={link.emoji} disabled={true}>
+					<Accordion.Control
+						icon={link.emoji}
+						disabled={true}
+						className={c.control}
+					>
 						{link.label}
 					</Accordion.Control>
 				) : (

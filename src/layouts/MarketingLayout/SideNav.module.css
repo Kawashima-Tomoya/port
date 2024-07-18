@@ -6,3 +6,8 @@
 .link{
   text-decoration: none;
 }
+
+.control:where(:disabled, [data-disabled]) {
+  opacity: inherit;
+  cursor: default;
+}
