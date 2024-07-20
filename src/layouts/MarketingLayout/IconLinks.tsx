@@ -1,6 +1,6 @@
 "use client";
 import { Anchor, Container, SimpleGrid } from "@mantine/core";
-import { SwitchTheme } from "~/components/Theme/SwitchTheme";
+import { ActionThemeIcon } from "~/components/Theme/ActionThemeIcon";
 import { AppleSvg } from "~/layouts/MarketingLayout/icons/AppleSvg";
 import { GithubSvg } from "~/layouts/MarketingLayout/icons/GithubSvg";
 import { XiconSvg } from "~/layouts/MarketingLayout/icons/XiconSvg";
@@ -41,7 +41,7 @@ export function IconLinks() {
 				>
 					<AppleSvg />
 				</Anchor>
-				<SwitchTheme />
+				<ActionThemeIcon />
 			</SimpleGrid>
 		</Container>
 	);

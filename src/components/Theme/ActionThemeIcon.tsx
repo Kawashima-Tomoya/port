@@ -9,16 +9,16 @@ export function ActionThemeIcon(props: ActionIconProps) {
 
 	return (
 		<ActionIcon
-			variant="default"
+			variant="transparent"
 			aria-label="Toggle theme"
 			onClick={toggleColorScheme}
 			loading={colorScheme === undefined}
 			{...props}
 		>
 			{colorScheme === "light" ? (
-				<IconMoon size="1rem" stroke={1.5} />
+				<IconMoon size={20} stroke={1} color="var(--mantine-color-blue-7)" />
 			) : (
-				<IconSun size="1rem" stroke={1.5} />
+				<IconSun size={24} stroke={1} color="var(--mantine-color-yellow-4)" />
 			)}
 		</ActionIcon>
 	);
