@@ -1,5 +1,11 @@
-import { Container } from "@mantine/core";
+import { Container, Title } from "@mantine/core";
 
 export default function Page() {
-	return <Container size="md">TOP</Container>;
+	return (
+		<Container size="md">
+			<Title order={1} size="h2">
+				Top
+			</Title>
+		</Container>
+	);
 }

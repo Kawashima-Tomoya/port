@@ -6,6 +6,7 @@ import type { ReactNode } from "react";
 
 export const theme = createTheme({
 	/* Put your mantine theme override here */
+	headings: { fontFamily: "Avenir, Roboto" },
 	components: {
 		Accordion: {
 			styles: {
