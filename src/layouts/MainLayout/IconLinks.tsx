@@ -1,9 +1,9 @@
 "use client";
 import { Anchor, Container, SimpleGrid } from "@mantine/core";
 import { ActionThemeIcon } from "~/components/Theme/ActionThemeIcon";
-import { AppleSvg } from "~/layouts/MarketingLayout/icons/AppleSvg";
-import { GithubSvg } from "~/layouts/MarketingLayout/icons/GithubSvg";
-import { XiconSvg } from "~/layouts/MarketingLayout/icons/XiconSvg";
+import { AppleSvg } from "~/layouts/MainLayout/icons/AppleSvg";
+import { GithubSvg } from "~/layouts/MainLayout/icons/GithubSvg";
+import { XiconSvg } from "~/layouts/MainLayout/icons/XiconSvg";
 import c from "./IconLinks.module.css";
 
 export function IconLinks() {

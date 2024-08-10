@@ -2,11 +2,10 @@ import { Container, Stack } from "@mantine/core";
 import c from "./index.module.css";
 
 import type { ReactNode } from "react";
-import { Footer } from "~/layouts/MarketingLayout/Footer";
-import { IconLinks } from "~/layouts/MarketingLayout/IconLinks";
-import { SideNav } from "~/layouts/MarketingLayout/SideNav";
+import { IconLinks } from "~/layouts/MainLayout/IconLinks";
+import { SideNav } from "~/layouts/MainLayout/SideNav";
 
-export function MarketingLayout({ children }: { children: ReactNode }) {
+export function MainLayout({ children }: { children: ReactNode }) {
 	return (
 		<Container className={c.container}>
 			<div className={c.mainContainer}>
@@ -16,7 +15,7 @@ export function MarketingLayout({ children }: { children: ReactNode }) {
 				</Stack>
 				<main className={c.main}>{children}</main>
 			</div>
-			<Footer />
+			{/* <Footer /> */}
 		</Container>
 	);
 }

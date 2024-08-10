@@ -1,6 +1,7 @@
 .item{
   text-decoration: none;
   overflow: hidden;
+  border-color: blue;
 }
 
 .link{

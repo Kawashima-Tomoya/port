@@ -43,7 +43,7 @@ export function SideNav() {
 					<Accordion.Control icon={link.emoji}>{link.label}</Accordion.Control>
 				)}
 			</Link>
-			<Accordion.Panel bg={alpha("var(--mantine-color-dark-9)", 0.2)}>
+			<Accordion.Panel bg={alpha("var(--mantine-color-body)", 0.4)}>
 				<Text size="sm">{link.description}</Text>
 			</Accordion.Panel>
 		</Accordion.Item>
