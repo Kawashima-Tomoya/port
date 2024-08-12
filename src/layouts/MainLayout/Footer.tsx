@@ -12,8 +12,8 @@ const links = [
 export function Footer() {
 	return (
 		<footer className={c.footer}>
-			<Container className={c.inner}>
-				ロゴ
+			<Container className={c.inner} c="dimmed">
+				<small>&copy;2024 - Copyright kawashima, All Rights Reserved.</small>
 				<Group className={c.links}>
 					{/* biome-ignore lint/nursery/useJsxKeyInIterable: TODO: Biome側のエラーと思われるため、いったん無効化 */}
 					{links.map((link) => (
