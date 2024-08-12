@@ -19,6 +19,17 @@
   border-radius: 7px;
   /* margin-top: rem(40px);
   margin-bottom: rem(120px); */
+
+* {
+  animation-name: fuwa;
+  animation-duration: .5s;
 }
-
-
+@keyframes fuwa{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+}
