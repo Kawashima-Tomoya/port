@@ -1,4 +1,13 @@
-import { Container, Group, MantineProvider, Title } from "@mantine/core";
+import {
+	Avatar,
+	Container,
+	Group,
+	MantineProvider,
+	Space,
+	Text,
+	Title,
+} from "@mantine/core";
+import { CopyBtn } from "~/components/ui/CopyButton/CopyBtn";
 import {
 	CSS,
 	Figma,
@@ -18,9 +27,7 @@ export default function Page() {
 	return (
 		<MantineProvider>
 			<Container size="md">
-				<Title order={1} size="h2">
-					Skills
-				</Title>
+				<Title order={1}>Skills</Title>
 
 				<Title order={2} size="h3" mt="lg">
 					Language
@@ -52,11 +59,31 @@ export default function Page() {
 					<Slack />
 				</Group>
 			</Container>
+			<Space h="lg" />
 
 			<Container mt="xl">
-				<Title order={1} size="h2">
+				<Title order={1}>Profile</Title>
+
+				<Title order={2} size="h3" mt="lg">
 					About Me
 				</Title>
+				<Group>
+					<Avatar color="cyan" />
+					<Text size="sm">
+						北海道札幌市出身の26歳
+						<br /> フロントエンドを独学で勉強してます！
+					</Text>
+				</Group>
+
+				<Title order={2} size="h3" mt="lg">
+					Contact
+				</Title>
+				<CopyBtn
+					mail="57kawashima@gmail.com"
+					timeout={3000}
+					copiedTxt={"メールアドレスをコピーしました★"}
+					unCopiedTxt={"メールはこちら！"}
+				/>
 			</Container>
 		</MantineProvider>
 	);
