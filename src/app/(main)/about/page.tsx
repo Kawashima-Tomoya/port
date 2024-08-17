@@ -71,7 +71,7 @@ export default function Page() {
 					<Avatar color="cyan" />
 					<Text size="sm">
 						北海道札幌市出身の26歳
-						<br /> フロントエンドを独学で勉強してます！
+						<br /> 主にフロントエンドを独学で勉強してます！
 					</Text>
 				</Group>
 
