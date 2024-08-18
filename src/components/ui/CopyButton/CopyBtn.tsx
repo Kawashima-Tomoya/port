@@ -3,24 +3,31 @@
 import { Button, CopyButton } from "@mantine/core";
 
 type CopyBtnProps = {
-	mail: string;
+	value: string;
 	timeout: number;
+	variant?: string;
 	copiedTxt: string;
 	unCopiedTxt: string;
+	defColor?: string[];
+	size?: string;
 };
 
 export function CopyBtn({
-	mail,
+	value,
 	timeout,
+	variant,
 	copiedTxt,
 	unCopiedTxt,
+	defColor,
+	size,
 }: CopyBtnProps) {
 	return (
-		<CopyButton value={mail} timeout={timeout}>
+		<CopyButton value={value} timeout={timeout}>
 			{({ copied, copy }) => (
 				<Button
-					variant="light"
-					color={copied ? "teal" : "var(--mantine-color-text)"}
+					variant={variant}
+					color={copied ? defColor?.[0] : defColor?.[1]}
+					size={size}
 					onClick={copy}
 				>
 					{copied ? copiedTxt : unCopiedTxt}

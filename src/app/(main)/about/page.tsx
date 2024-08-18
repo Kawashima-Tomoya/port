@@ -79,10 +79,12 @@ export default function Page() {
 					Contact
 				</Title>
 				<CopyBtn
-					mail="57kawashima@gmail.com"
+					value="57kawashima@gmail.com"
 					timeout={3000}
-					copiedTxt={"メールアドレスをコピーしました★"}
-					unCopiedTxt={"メールはこちら！"}
+					variant="light"
+					copiedTxt="メールアドレスをコピーしました★"
+					unCopiedTxt="メールはこちら！"
+					defColor={["teal", "var(--mantine-color-text)"]}
 				/>
 			</Container>
 		</MantineProvider>
