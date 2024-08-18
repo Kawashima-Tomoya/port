@@ -4,20 +4,6 @@ import "@mantine/core/styles.css";
 import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 import type { ReactNode } from "react";
 
-// export const theme = createTheme({
-// 	/* Put your mantine theme override here */
-// 	headings: { fontFamily: "Avenir, Roboto" },
-// 	components: {
-// 		Accordion: {
-// 			styles: {
-// 				content: {
-// 					padding: "12px",
-// 				},
-// 			}
-// 		},
-// 	},
-// });
-
 export default function RootLayout({ children }: { children: ReactNode }) {
 	return (
 		<html lang="ja">
