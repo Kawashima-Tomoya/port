@@ -12,7 +12,8 @@ const imageLinks: ImageLinks[] = [
 	{ href: "/works/1", src: "/instasave.JPEG", alt: "instasave1" },
 	{ href: "/works/2", src: "/instasave.JPEG", alt: "instasave2" },
 	{ href: "/works/3", src: "/instasave.JPEG", alt: "instasave3" },
-];
+] as const;
+
 export default function Page() {
 	return (
 		<Container size="md">
