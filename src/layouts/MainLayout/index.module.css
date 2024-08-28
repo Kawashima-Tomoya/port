@@ -15,18 +15,21 @@
 .main {
   width: rem(600px);
   padding: 1rem;
-  border: 1px solid blue;
   border-radius: 7px;
-* {
-  animation-name: fuwa;
-  animation-duration: .5s;
-}
-@keyframes fuwa{
-  0%{
-    opacity: 0;
+  background-color: light-dark(
+    var(--mantine-color-lightBlue-5),
+    var(--mantine-color-darkBlue-9)
+  );
+  * {
+    animation-name: fuwa;
+    animation-duration: 0.5s;
   }
-  100%{
-    opacity: 1;
+  @keyframes fuwa{
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
   }
-}
 }

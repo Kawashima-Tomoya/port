@@ -2,7 +2,10 @@
   width: 13rem;
   margin: 0;
   padding: 0.5rem;
-  border: 1px solid blue;
+  background-color: light-dark(
+    var(--mantine-color-lightBlue-5),
+    var(--mantine-color-darkBlue-9)
+  );
   border-radius: 7px;
 }
 

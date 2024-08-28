@@ -1,5 +1,5 @@
 "use client";
-import { Accordion, Text, alpha } from "@mantine/core";
+import { Accordion, Text } from "@mantine/core";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import c from "./SideNav.module.css";
@@ -29,21 +29,23 @@ export function SideNav() {
 	const pathname = usePathname();
 
 	const items = links.map((link) => (
-		<Accordion.Item key={link.href} value={link.href} className={c.item}>
+		<Accordion.Item key={link.href} value={link.href}>
 			<Link href={link.href} className={c.link}>
 				{link.href === pathname ? (
 					<Accordion.Control
 						icon={link.emoji}
 						disabled={true}
-						className={c.control}
+						className={c.selectedControl}
 					>
 						{link.label}
 					</Accordion.Control>
 				) : (
-					<Accordion.Control icon={link.emoji}>{link.label}</Accordion.Control>
+					<Accordion.Control icon={link.emoji} className={c.unSelectedControl}>
+						{link.label}
+					</Accordion.Control>
 				)}
 			</Link>
-			<Accordion.Panel bg={alpha("var(--mantine-color-body)", 0.4)}>
+			<Accordion.Panel>
 				<Text size="sm">{link.description}</Text>
 			</Accordion.Panel>
 		</Accordion.Item>
@@ -56,6 +58,7 @@ export function SideNav() {
 			radius="md"
 			transitionDuration={0}
 			disableChevronRotation={true}
+			classNames={c}
 		>
 			{items}
 		</Accordion>

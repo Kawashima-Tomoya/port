@@ -10,7 +10,7 @@ export function IconLinks() {
 	// const theme = useMantineTheme;
 
 	return (
-		<Container className={c.container}>
+		<Container className={c.container} bg="primary">
 			<SimpleGrid cols={4} spacing="xxs" className={c.gridItem}>
 				<Anchor
 					href="https://x.com/home"
