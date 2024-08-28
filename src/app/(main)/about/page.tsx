@@ -26,10 +26,39 @@ import {
 export default function Page() {
 	return (
 		<MantineProvider>
-			<Container size="md">
-				<Title order={1}>Skills</Title>
+			<Container size="sm">
+				<Title order={1}>Profile</Title>
+
+				<Title order={2} size="h3" mt="md">
+					About Me
+				</Title>
+				<Group>
+					<Avatar size="xl" color="cyan" />
+					<Text>
+						北海道札幌市出身の26歳
+						<br /> 主にフロントエンドを独学で勉強してます！
+					</Text>
+				</Group>
 
 				<Title order={2} size="h3" mt="lg">
+					Contact
+				</Title>
+				<CopyBtn
+					value="57kawashima@gmail.com"
+					timeout={3000}
+					variant="light"
+					copiedTxt="メールアドレスをコピーしました★"
+					unCopiedTxt="メールはこちら！"
+					defColor={["cyan", "var(--mantine-color-text)"]}
+				/>
+			</Container>
+
+			<Space h="lg" />
+
+			<Container mt="xl">
+				<Title order={1}>Skills</Title>
+
+				<Title order={2} size="h3" mt="md">
 					Language
 				</Title>
 				<Group>
@@ -58,34 +87,6 @@ export default function Page() {
 					<Figma />
 					<Slack />
 				</Group>
-			</Container>
-			<Space h="lg" />
-
-			<Container mt="xl">
-				<Title order={1}>Profile</Title>
-
-				<Title order={2} size="h3" mt="lg">
-					About Me
-				</Title>
-				<Group>
-					<Avatar color="cyan" />
-					<Text size="sm">
-						北海道札幌市出身の26歳
-						<br /> 主にフロントエンドを独学で勉強してます！
-					</Text>
-				</Group>
-
-				<Title order={2} size="h3" mt="lg">
-					Contact
-				</Title>
-				<CopyBtn
-					value="57kawashima@gmail.com"
-					timeout={3000}
-					variant="light"
-					copiedTxt="メールアドレスをコピーしました★"
-					unCopiedTxt="メールはこちら！"
-					defColor={["teal", "var(--mantine-color-text)"]}
-				/>
 			</Container>
 		</MantineProvider>
 	);
