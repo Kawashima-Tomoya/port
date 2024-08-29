@@ -1,12 +1,4 @@
-import {
-	Avatar,
-	Container,
-	Group,
-	MantineProvider,
-	Space,
-	Text,
-	Title,
-} from "@mantine/core";
+import { Avatar, Container, Group, Space, Text, Title } from "@mantine/core";
 import { CopyBtn } from "~/components/ui/CopyButton/CopyBtn";
 import {
 	CSS,
@@ -25,11 +17,20 @@ import {
 
 export default function Page() {
 	return (
-		<MantineProvider>
-			<Container size="sm">
-				<Title order={1}>Profile</Title>
+		<Container p="0">
+			<Container
+				style={{
+					padding: "var(--mantine-spacing-md)",
+					border:
+						"1px solid light-dark(var(--mantine-color-dark-1), var(--mantine-color-dark-4))",
+					borderRadius: "var(--mantine-radius-md)",
+				}}
+			>
+				<Title order={2} size="h1">
+					Profile
+				</Title>
 
-				<Title order={2} size="h3" mt="md">
+				<Title order={3} mt="md">
 					About Me
 				</Title>
 				<Group>
@@ -40,7 +41,7 @@ export default function Page() {
 					</Text>
 				</Group>
 
-				<Title order={2} size="h3" mt="lg">
+				<Title order={3} mt="lg">
 					Contact
 				</Title>
 				<CopyBtn
@@ -53,12 +54,21 @@ export default function Page() {
 				/>
 			</Container>
 
-			<Space h="lg" />
+			<Space h="xl" />
 
-			<Container mt="xl">
-				<Title order={1}>Skills</Title>
+			<Container
+				style={{
+					padding: "var(--mantine-spacing-md)",
+					border:
+						"1px solid light-dark(var(--mantine-color-dark-1), var(--mantine-color-dark-4))",
+					borderRadius: "var(--mantine-radius-md)",
+				}}
+			>
+				<Title order={2} size="h1">
+					Skills
+				</Title>
 
-				<Title order={2} size="h3" mt="md">
+				<Title order={3} mt="md">
 					Language
 				</Title>
 				<Group>
@@ -70,7 +80,7 @@ export default function Page() {
 					<Java />
 				</Group>
 
-				<Title order={2} size="h3" mt="lg">
+				<Title order={3} mt="lg">
 					FrameWork
 				</Title>
 				<Group>
@@ -79,7 +89,7 @@ export default function Page() {
 					<TailwindCss />
 				</Group>
 
-				<Title order={2} size="h3" mt="lg">
+				<Title order={3} mt="lg">
 					Tools
 				</Title>
 				<Group>
@@ -88,6 +98,6 @@ export default function Page() {
 					<Slack />
 				</Group>
 			</Container>
-		</MantineProvider>
+		</Container>
 	);
 }
