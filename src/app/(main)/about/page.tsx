@@ -1,4 +1,5 @@
 import { Avatar, Container, Group, Space, Text, Title } from "@mantine/core";
+import { BorderContainer } from "~/components/ui/Container/borderContainer";
 import { CopyBtn } from "~/components/ui/CopyButton/CopyBtn";
 import {
 	CSS,
@@ -18,21 +19,12 @@ import {
 export default function Page() {
 	return (
 		<Container p="0">
-			<Container
-				style={{
-					padding: "var(--mantine-spacing-md)",
-					border:
-						"1px solid light-dark(var(--mantine-color-dark-1), var(--mantine-color-dark-4))",
-					borderRadius: "var(--mantine-radius-md)",
-				}}
-			>
-				<Title order={2} size="h1">
-					Profile
-				</Title>
+			<Title order={2} size="h1">
+				Profile
+			</Title>
 
-				<Title order={3} mt="md">
-					About Me
-				</Title>
+			<BorderContainer>
+				<Title order={3}>About Me</Title>
 				<Group>
 					<Avatar size="xl" color="cyan" />
 					<Text>
@@ -52,25 +44,16 @@ export default function Page() {
 					unCopiedTxt="メールはこちら！"
 					defColor={["cyan", "var(--mantine-color-text)"]}
 				/>
-			</Container>
+			</BorderContainer>
 
 			<Space h="xl" />
 
-			<Container
-				style={{
-					padding: "var(--mantine-spacing-md)",
-					border:
-						"1px solid light-dark(var(--mantine-color-dark-1), var(--mantine-color-dark-4))",
-					borderRadius: "var(--mantine-radius-md)",
-				}}
-			>
-				<Title order={2} size="h1">
-					Skills
-				</Title>
+			<Title order={2} size="h1">
+				Skills
+			</Title>
 
-				<Title order={3} mt="md">
-					Language
-				</Title>
+			<BorderContainer>
+				<Title order={3}>Language</Title>
 				<Group>
 					<HTML />
 					<CSS />
@@ -97,7 +80,7 @@ export default function Page() {
 					<Figma />
 					<Slack />
 				</Group>
-			</Container>
+			</BorderContainer>
 		</Container>
 	);
 }
