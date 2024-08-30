@@ -1,6 +1,6 @@
 "use client";
 
-import { Anchor, Container, SimpleGrid } from "@mantine/core";
+import { Anchor, Box, SimpleGrid } from "@mantine/core";
 import { ActionThemeIcon } from "~/components/Theme/ActionThemeIcon";
 import { AppleSvg } from "~/layouts/MainLayout/icons/AppleSvg";
 import { GithubSvg } from "~/layouts/MainLayout/icons/GithubSvg";
@@ -15,7 +15,7 @@ export function IconLinks() {
 	] as const;
 
 	return (
-		<Container className={c.container}>
+		<Box className={c.container}>
 			<SimpleGrid cols={4} className={c.gridItem}>
 				{/* biome-ignore lint/nursery/useJsxKeyInIterable: TODO: Biome側のエラーと思われるため、いったん無効化 */}
 				{iconLinks.map((iconLink) => (
@@ -33,6 +33,6 @@ export function IconLinks() {
 				))}
 				<ActionThemeIcon />
 			</SimpleGrid>
-		</Container>
+		</Box>
 	);
 }

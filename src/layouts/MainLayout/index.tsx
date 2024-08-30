@@ -1,6 +1,7 @@
 import {
 	Container,
 	type DefaultMantineColor,
+	Flex,
 	type MantineColorsTuple,
 	MantineProvider,
 	Stack,
@@ -59,18 +60,13 @@ export function MainLayout({ children }: { children: ReactNode }) {
 	return (
 		<MantineProvider theme={theme}>
 			<Container className={c.container}>
-				<div className={c.mainContainer}>
-					<Stack
-						h={400}
-						bg="var(--mantine-color-body)"
-						justify="start"
-						gap="xs"
-					>
+				<Flex justify="center" gap="lg" className={c.mainContainer}>
+					<Stack gap="xs" className={c.side}>
 						<IconLinks />
 						<SideNav />
 					</Stack>
 					<main className={c.main}>{children}</main>
-				</div>
+				</Flex>
 				<Footer />
 			</Container>
 		</MantineProvider>

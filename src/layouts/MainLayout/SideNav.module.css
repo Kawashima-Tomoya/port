@@ -1,3 +1,6 @@
+.root {
+  width: rem(200px);
+}
 .item {
   text-decoration: none;
   overflow: hidden;

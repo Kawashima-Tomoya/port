@@ -1,15 +1,17 @@
 .container {
   display: grid;
   grid-template-rows: 1fr auto;
-  grid-template-columns: 100%;
   min-height: 100vh;
 }
 
 .mainContainer{
-  display: grid;
-  grid-template-columns:  1fr auto;
-  gap: var(--mantine-spacing-md);
-  margin: 3rem auto;
+  margin: 2rem 0;
+}
+
+.side {
+  position: sticky;
+  top: 0;
+  align-self: start;
 }
 
 .main {
