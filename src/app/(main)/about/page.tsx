@@ -19,21 +19,19 @@ import {
 export default function Page() {
 	return (
 		<Container p="0">
-			<Title order={2} size="h1">
-				Profile
-			</Title>
+			<Title order={2}>Profile</Title>
 
 			<BorderContainer>
 				<Title order={3}>About Me</Title>
 				<Group>
-					<Avatar size="xl" color="cyan" />
+					<Avatar size="xl" color="cyan" mt="xs" />
 					<Text>
 						北海道札幌市出身の26歳
 						<br /> 主にフロントエンドを独学で勉強してます！
 					</Text>
 				</Group>
 
-				<Title order={3} mt="lg">
+				<Title order={3} mt="lg" mb="xs">
 					Contact
 				</Title>
 				<CopyBtn
@@ -48,13 +46,11 @@ export default function Page() {
 
 			<Space h="xl" />
 
-			<Title order={2} size="h1">
-				Skills
-			</Title>
+			<Title order={2}>Skills</Title>
 
 			<BorderContainer>
 				<Title order={3}>Language</Title>
-				<Group>
+				<Group mt="xs">
 					<HTML />
 					<CSS />
 					<JavaScript />
@@ -66,7 +62,7 @@ export default function Page() {
 				<Title order={3} mt="lg">
 					FrameWork
 				</Title>
-				<Group>
+				<Group mt="xs">
 					<React />
 					<Nextjs />
 					<TailwindCss />
@@ -75,7 +71,7 @@ export default function Page() {
 				<Title order={3} mt="lg">
 					Tools
 				</Title>
-				<Group>
+				<Group mt="xs">
 					<VisualStudioCode />
 					<Figma />
 					<Slack />
