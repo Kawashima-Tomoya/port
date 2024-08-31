@@ -4,10 +4,6 @@
   min-height: 100vh;
 }
 
-/* .mainContainer{
-  margin: 2rem 0;
-} */
-
 .side {
   padding-top: 2rem;
   position: sticky;
@@ -16,7 +12,6 @@
 }
 
 .main {
-
   width: rem(600px);
   margin: 2rem 0;
   padding: var(--mantine-spacing-md);
