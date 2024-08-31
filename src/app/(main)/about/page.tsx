@@ -1,6 +1,6 @@
 import { Avatar, Container, Group, Space, Text, Title } from "@mantine/core";
-import { BorderContainer } from "~/components/ui/Container/borderContainer";
 import { CopyBtn } from "~/components/ui/CopyButton/CopyBtn";
+import { BorderContainer } from "~/components/ui/StyledContainer/BorderContainer";
 import {
 	CSS,
 	Figma,
