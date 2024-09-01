@@ -1,12 +1,11 @@
 import c from "./index.module.css";
 
 import type { ReactNode } from "react";
-import { Navbar } from "./Navbar";
 
-export function DashboardLayout({ children }: { children: ReactNode }) {
+export function FormLayout({ children }: { children: ReactNode }) {
 	return (
 		<div className={c.container}>
-			<Navbar />
+			{/* <Navbar /> */}
 			<main className={c.main}>{children}</main>
 		</div>
 	);
