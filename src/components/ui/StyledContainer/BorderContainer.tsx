@@ -1,7 +1,9 @@
-import { Container } from "@mantine/core";
-import type { ReactNode } from "react";
+import { Container, type ContainerProps } from "@mantine/core";
 import c from "./BorderContainer.module.css";
 
-export function BorderContainer({ children }: { children: ReactNode }) {
-	return <Container className={c.borderContainer}>{children}</Container>;
+// type Props = ComponentProps<typeof Container>;
+type Props = ContainerProps;
+
+export function BorderContainer(containerProps: Props) {
+	return <Container {...containerProps} className={c.borderContainer} />;
 }
