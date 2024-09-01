@@ -1,5 +1,3 @@
-"use client";
-
 import { Container, Image, SimpleGrid } from "@mantine/core";
 import Link from "next/link";
 
