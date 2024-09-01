@@ -16,9 +16,9 @@ export function ActionThemeIcon(props: ActionIconProps) {
 			{...props}
 		>
 			{colorScheme === "light" ? (
-				<IconMoon size={20} stroke={1} color="var(--mantine-color-blue-7)" />
+				<IconMoon size={20} stroke={1.5} color="var(--mantine-color-blue-7)" />
 			) : (
-				<IconSun size={24} stroke={1} color="var(--mantine-color-yellow-4)" />
+				<IconSun size={24} stroke={1.5} color="var(--mantine-color-yellow-4)" />
 			)}
 		</ActionIcon>
 	);
