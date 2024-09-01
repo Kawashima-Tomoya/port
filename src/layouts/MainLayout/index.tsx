@@ -47,13 +47,19 @@ const lightBlue: MantineColorsTuple = [
 	"#6bd1fa33",
 ];
 
-export const theme = createTheme({
+import { DotGothic16 } from "next/font/google";
+const font = DotGothic16({ weight: "400", subsets: ["latin"] });
+
+const theme = createTheme({
 	/* Put your mantine theme override here */
 	colors: {
 		darkBlue,
 		lightBlue,
 	},
-	headings: { fontFamily: "Avenir, Roboto" },
+	// fontFamily: "Avenir",
+	// headings: { fontFamily: "Avenir" },
+	fontFamily: font.style.fontFamily,
+	headings: { fontFamily: font.style.fontFamily },
 });
 
 export function MainLayout({ children }: { children: ReactNode }) {
