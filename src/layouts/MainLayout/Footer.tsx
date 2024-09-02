@@ -9,7 +9,7 @@ export function Footer() {
 	return (
 		<footer className={c.footer}>
 			<Container className={c.inner} c="dimmed">
-				<small>&copy;2024 - Copyright kawashima, All Rights Reserved.</small>
+				<small>&copy;2024 - Copyright All Rights Reserved.</small>
 				<Group className={c.links}>
 					{/* お問い合わせはそのうちフォームにする */}
 					<CopyBtn

@@ -20,7 +20,6 @@ export default function Page() {
 	return (
 		<Container p="0">
 			<Title order={2}>Profile</Title>
-
 			<BorderContainer>
 				<Title order={3}>About Me</Title>
 				<Group>
@@ -47,7 +46,6 @@ export default function Page() {
 			<Space h="xl" />
 
 			<Title order={2}>Skills</Title>
-
 			<BorderContainer>
 				<Title order={3}>Language</Title>
 				<Group mt="xs">
