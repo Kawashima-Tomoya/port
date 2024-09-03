@@ -30,24 +30,22 @@ export function SideNav() {
 
 	const items = links.map((link) => (
 		<Accordion.Item key={link.href} value={link.href}>
-			<Link href={link.href} className={c.link}>
-				{link.href === pathname ? (
-					<Accordion.Control
-						icon={link.emoji}
-						disabled={true}
-						className={c.selectedControl}
-					>
+			{link.href === pathname ? (
+				<Link href={link.href} className={c.link}>
+					<Accordion.Control icon={link.emoji} className={c.selectedControl}>
 						{link.label}
 					</Accordion.Control>
-				) : (
+					<Accordion.Panel>
+						<Text size="sm">{link.description}</Text>
+					</Accordion.Panel>
+				</Link>
+			) : (
+				<Link href={link.href} className={c.link}>
 					<Accordion.Control icon={link.emoji} className={c.unSelectedControl}>
 						{link.label}
 					</Accordion.Control>
-				)}
-			</Link>
-			<Accordion.Panel>
-				<Text size="sm">{link.description}</Text>
-			</Accordion.Panel>
+				</Link>
+			)}
 		</Accordion.Item>
 	));
 

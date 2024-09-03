@@ -16,6 +16,7 @@
     }
   }
   .selectedControl {
+    pointer-events: none;
     background-color: light-dark(
       var(--mantine-color-lightBlue-2),
       var(--mantine-color-darkBlue-7)
