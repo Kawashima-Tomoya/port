@@ -1,4 +1,4 @@
-import { Container, Space, Text, Title } from "@mantine/core";
+import { Container, List, ListItem, Space, Text, Title } from "@mantine/core";
 import { BorderContainer } from "~/components/ui/StyledContainer/BorderContainer";
 
 export default function Page() {
@@ -21,15 +21,17 @@ export default function Page() {
 			<Title order={2}>About This Site</Title>
 			<BorderContainer>
 				<Title order={3}>Concept</Title>
-				<Text mt="xs">シンプル</Text>
+				<Text mt="xs">シンプルな静的サイト</Text>
 				<Title order={3} mt="lg">
 					使用技術
 				</Title>
-				<Text mt="xs">
-					・Next.JS
-					<br />
-					・Mantine
-				</Text>
+				<List size="sm" mt="xs">
+					<ListItem>言語 : React.JS, TypeScript</ListItem>
+					<ListItem>フレームワーク : Next.JS</ListItem>
+					<ListItem>CSS : CSS modules</ListItem>
+					<ListItem>UIコンポーネント : Mantine</ListItem>
+					<ListItem>フォーマッター : Biome</ListItem>
+				</List>
 			</BorderContainer>
 
 			<Space h="xl" />
