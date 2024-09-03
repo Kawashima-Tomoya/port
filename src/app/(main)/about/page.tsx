@@ -23,7 +23,13 @@ export default function Page() {
 			<BorderContainer>
 				<Title order={3}>About Me</Title>
 				<Group>
-					<Avatar size="xl" color="cyan" mt="xs" />
+					<Avatar
+						size="xl"
+						radius="sm"
+						src="/dog_husky_silver.svg"
+						alt="it's me"
+						mt="xs"
+					/>
 					<Text>
 						北海道札幌市出身の26歳
 						<br /> 主にフロントエンドを独学で勉強してます！
