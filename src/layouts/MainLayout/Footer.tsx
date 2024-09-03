@@ -20,7 +20,7 @@ export function Footer() {
 						copiedTxt="メールアドレスをコピーしました★"
 						unCopiedTxt="お問い合わせ"
 						defColor={[
-							"var(--mantine-color-gray-4)",
+							"var(--mantine-color-gray-5)",
 							"var(--mantine-color-dimmed)",
 						]}
 					/>
