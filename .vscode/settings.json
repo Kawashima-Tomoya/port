@@ -33,7 +33,6 @@
 	"typescript.preferences.importModuleSpecifier": "non-relative",
 	"typescript.tsdk": "node_modules/typescript/lib",
 	"cSpell.ignoreWords": [
-		"Avenir",
 		"TOMOYA",
 		"Xicon",
 		"iconlink",
