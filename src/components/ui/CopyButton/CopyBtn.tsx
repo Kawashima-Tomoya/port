@@ -1,36 +1,29 @@
 "use client";
 
 import { Button, CopyButton } from "@mantine/core";
+import type { ButtonProps, CopyButtonProps } from "@mantine/core";
 
 type CopyBtnProps = {
-	value: string;
-	timeout: number;
-	variant?: string;
-	copiedTxt: string;
-	unCopiedTxt: string;
-	defColor?: string[];
-	size?: string;
-};
+	copiedText: string;
+	unCopiedText: string;
+} & CopyButtonProps;
+
+type Props = CopyBtnProps & Omit<ButtonProps, "children">;
 
 export function CopyBtn({
-	value,
-	timeout,
-	variant,
-	copiedTxt,
-	unCopiedTxt,
-	defColor,
-	size,
-}: CopyBtnProps) {
+	copiedText,
+	unCopiedText,
+	...rest
+}: Props) {
 	return (
-		<CopyButton value={value} timeout={timeout}>
+		<CopyButton {...rest}>
 			{({ copied, copy }) => (
 				<Button
-					variant={variant}
-					color={copied ? defColor?.[0] : defColor?.[1]}
-					size={size}
+					{...rest}
+					color={copied ? rest.color?.[0] : rest.color?.[1]}
 					onClick={copy}
 				>
-					{copied ? copiedTxt : unCopiedTxt}
+					{copied ? copiedText : unCopiedText}
 				</Button>
 			)}
 		</CopyButton>
