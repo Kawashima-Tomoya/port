@@ -36,7 +36,7 @@ export default function Page() {
 
 			<Space h="xl" />
 
-			<Title order={3}>To Be Updated...</Title>
+			<Title order={2}>To Be Updated...</Title>
 			<BorderContainer>
 				<Text>- レスポンシブ対応</Text>
 				<Text>- お問い合わせフォームの実装</Text>

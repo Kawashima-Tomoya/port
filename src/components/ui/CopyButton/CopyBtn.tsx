@@ -6,13 +6,17 @@ import type { ButtonProps, CopyButtonProps } from "@mantine/core";
 type CopyBtnProps = {
 	copiedText: string;
 	unCopiedText: string;
-} & CopyButtonProps;
+	copiedColor: string;
+	unCopiedColor: string;
+} & Omit<CopyButtonProps, "children">;
 
 type Props = CopyBtnProps & Omit<ButtonProps, "children">;
 
 export function CopyBtn({
 	copiedText,
 	unCopiedText,
+	copiedColor,
+	unCopiedColor,
 	...rest
 }: Props) {
 	return (
@@ -20,7 +24,7 @@ export function CopyBtn({
 			{({ copied, copy }) => (
 				<Button
 					{...rest}
-					color={copied ? rest.color?.[0] : rest.color?.[1]}
+					color={copied ? copiedColor : unCopiedColor}
 					onClick={copy}
 				>
 					{copied ? copiedText : unCopiedText}

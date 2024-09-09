@@ -17,12 +17,10 @@ export function Footer() {
 						timeout={3000}
 						variant="subtle"
 						size="xs"
-						copiedTxt="メールアドレスをコピーしました★"
-						unCopiedTxt="お問い合わせ"
-						defColor={[
-							"var(--mantine-color-gray-5)",
-							"var(--mantine-color-dimmed)",
-						]}
+						copiedText="メールアドレスをコピーしました★"
+						unCopiedText="お問い合わせ"
+						copiedColor="var(--mantine-color-gray-5)"
+						unCopiedColor="var(--mantine-color-dimmed)"
 					/>
 					{/* biome-ignore lint/nursery/useJsxKeyInIterable: TODO: Biome側のエラーと思われるため、いったん無効化 */}
 					{/* {links.map((link) => (

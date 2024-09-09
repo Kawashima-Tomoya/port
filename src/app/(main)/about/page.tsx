@@ -43,9 +43,10 @@ export default function Page() {
 					value="57kawashima@gmail.com"
 					timeout={3000}
 					variant="light"
-					copiedTxt="メールアドレスをコピーしました★"
-					unCopiedTxt="メールはこちら！"
-					defColor={["cyan", "var(--mantine-color-text)"]}
+					copiedText="メールアドレスをコピーしました★"
+					unCopiedText="メールはこちら！"
+					copiedColor="cyan"
+					unCopiedColor="var(--mantine-color-text)"
 				/>
 			</BorderContainer>
 
