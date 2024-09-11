@@ -8,7 +8,6 @@ import {
 	Java,
 	JavaScript,
 	Nextjs,
-	Nodejs,
 	React,
 	Slack,
 	TailwindCss,
@@ -60,7 +59,7 @@ export default function Page() {
 					<CSS />
 					<JavaScript />
 					<TypeScript />
-					<Nodejs />
+					{/* <Nodejs /> */}
 					<Java />
 				</Group>
 
