@@ -2,6 +2,7 @@
 import { Accordion, Text } from "@mantine/core";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import c from "./SideNav.module.css";
 
 const links = [
@@ -27,10 +28,17 @@ const links = [
 
 export function SideNav() {
 	const pathname = usePathname();
+	const [activeItem, setActiveItem] = useState<string | null>(pathname);
+
+	useEffect(() => {
+		const rootPath = pathname.split("/")[1];
+		const activeLink = links.find((link) => link.href.includes(rootPath));
+		setActiveItem(activeLink ? activeLink.href : null);
+	}, [pathname]);
 
 	const items = links.map((link) => (
 		<Accordion.Item key={link.href} value={link.href}>
-			{link.href === pathname ? (
+			{link.href === activeItem ? (
 				<Link href={link.href} className={c.link}>
 					<Accordion.Control icon={link.emoji} className={c.selectedControl}>
 						{link.label}
@@ -52,7 +60,8 @@ export function SideNav() {
 	return (
 		<Accordion
 			variant="contained"
-			defaultValue={pathname}
+			value={activeItem}
+			onChange={(value: string | null) => setActiveItem(value)}
 			radius="md"
 			transitionDuration={0}
 			disableChevronRotation={true}
