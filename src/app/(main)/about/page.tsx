@@ -22,16 +22,11 @@ export default function Page() {
 			<BorderContainer>
 				<Title order={3}>About Me</Title>
 				<Group>
-					<Avatar
-						size="xl"
-						radius="sm"
-						src="/dog_husky_silver.svg"
-						alt="it's me"
-						mt="xs"
-					/>
-					<Text>
+					<Avatar size="xl" radius="50%" src="/me.webp" alt="it's me" mt="xs" />
+					<Text size="sm">
 						北海道札幌市出身の26歳
-						<br /> 主にフロントエンドを独学で勉強してます！
+						<br /> フロントエンドの技術が好きで独学で勉強してます！
+						<br /> 新しいモノ好き。
 					</Text>
 				</Group>
 
