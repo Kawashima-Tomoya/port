@@ -22,12 +22,6 @@ export function Footer() {
 						copiedColor="var(--mantine-color-gray-5)"
 						unCopiedColor="var(--mantine-color-dimmed)"
 					/>
-					{/* biome-ignore lint/nursery/useJsxKeyInIterable: TODO: Biome側のエラーと思われるため、いったん無効化 */}
-					{/* {links.map((link) => (
-						<Anchor<"a"> c="dimmed" key={link.label} href={link.link} size="sm">
-							{link.label}
-						</Anchor>
-					))} */}
 				</Group>
 			</Container>
 		</footer>
