@@ -1,13 +1,22 @@
 .header {
-  height: rem(56px);
-  background-color: var(--mantine-color-body);
-  border-bottom: rem(1px) solid
-    light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+  display: none;
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  @media (max-width: $mantine-breakpoint-sm){
+    display: block;
+  }
 }
-
-.inner {
-  height: rem(56px);
+.container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-color: var(--mantine-color-body);
+}
+.button {
+  flex: 1;
+  &:hover{
+    
+  }
+  &:active{
+    color: var(--mantine-color-red-5);
+  }
 }

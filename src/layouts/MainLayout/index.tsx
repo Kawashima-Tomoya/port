@@ -48,6 +48,7 @@ const lightBlue: MantineColorsTuple = [
 ];
 
 import { DotGothic16 } from "next/font/google";
+import { Header } from "~/layouts/MainLayout/Header";
 const font = DotGothic16({ weight: "400", subsets: ["latin"] });
 
 const theme = createTheme({
@@ -65,6 +66,7 @@ const theme = createTheme({
 export function MainLayout({ children }: { children: ReactNode }) {
 	return (
 		<MantineProvider theme={theme}>
+			<Header />
 			<Container className={c.container}>
 				<Flex justify="center" gap="lg" className={c.mainContainer}>
 					<Stack gap="xs" className={c.side}>

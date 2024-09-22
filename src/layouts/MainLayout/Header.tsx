@@ -1,6 +1,6 @@
 import c from "./Header.module.css";
 
-import { Container, Group } from "@mantine/core";
+import { Box, Button, Container, Group, Text } from "@mantine/core";
 import { ActiveButton } from "~/components/ui/ActiveLink/ActiveButton";
 
 const links = [
@@ -12,17 +12,22 @@ const links = [
 export function Header() {
 	return (
 		<header className={c.header}>
-			<Container size="md" className={c.inner}>
-				<Group gap={40}>TITLE</Group>
-
-				<Group component="nav" justify="center" gap={8}>
-					{/* biome-ignore lint/nursery/useJsxKeyInIterable: TODO: Biome側のエラーと思われるため、いったん無効化 */}
-					{links.map((link) => (
-						<ActiveButton key={link.label} href={link.href}>
-							{link.label}
-						</ActiveButton>
-					))}
-				</Group>
+			<Container className={c.container}>
+				{/* biome-ignore lint/nursery/useJsxKeyInIterable: TODO: Biome側のエラーと思われるため、いったん無効化 */}
+				{links.map((link) => (
+					<ActiveButton
+						key={link.label}
+						href={link.href}
+						variant="outline"
+						color="indigo"
+						className={c.button}
+					>
+						{link.label}
+					</ActiveButton>
+				))}
+				<Button variant="outline" color="indigo" className={c.button}>
+					Links
+				</Button>
 			</Container>
 		</header>
 	);
