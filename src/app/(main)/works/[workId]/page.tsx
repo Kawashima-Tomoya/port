@@ -26,10 +26,14 @@ export default function Page(props: Props) {
 
 	return (
 		<Container>
-			<Button className={c.button} size="xs" radius="xl">
-				<Link href="/works" className={c.link}>
-					⇦ 一覧へ
-				</Link>
+			<Button
+				component={Link}
+				href="/works"
+				className={c.button}
+				size="xs"
+				radius="xl"
+			>
+				⇦ 一覧へ
 			</Button>
 
 			<Image
