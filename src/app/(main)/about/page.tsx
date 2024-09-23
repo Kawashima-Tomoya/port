@@ -13,7 +13,7 @@ import {
 	TailwindCss,
 	TypeScript,
 	VisualStudioCode,
-} from "~/layouts/MainLayout/icons/ImportSkillIcons";
+} from "~/icons/ImportSkillIcons";
 
 export default function Page() {
 	return (

@@ -1,0 +1,23 @@
+.link{
+  text-decoration: none;
+}
+
+.button {
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  background-color: light-dark(
+    var(--mantine-color-lightBlue-1),
+    var(--mantine-color-dark-8)
+  );
+  &:hover{
+    background-color: light-dark(
+      var(--mantine-color-lightBlue-3),
+      var(--mantine-color-dark-9)
+    );
+  }
+}
+
+.image {
+  object-fit: contain;
+  position: relative !important;
+  width: 100%;
+}

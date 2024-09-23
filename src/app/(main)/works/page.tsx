@@ -1,26 +1,24 @@
-import { Container, Image, SimpleGrid } from "@mantine/core";
+import { Box, Container, Image, SimpleGrid, Title } from "@mantine/core";
 import Link from "next/link";
-
-type ImageLinks = {
-	href: string;
-	src: string;
-	alt: string;
-};
-const imageLinks: ImageLinks[] = [
-	{ href: "/works/1", src: "/instasave.JPEG", alt: "instasave1" },
-	{ href: "/works/2", src: "/instasave.JPEG", alt: "instasave2" },
-	{ href: "/works/3", src: "/instasave.JPEG", alt: "instasave3" },
-] as const;
+import { imageLinks } from "~/components/page/WorksDetail/data";
 
 export default function Page() {
 	return (
-		<Container size="md">
-			<SimpleGrid cols={3}>
+		<Container p="0">
+			<SimpleGrid cols={2}>
 				{/* biome-ignore lint/nursery/useJsxKeyInIterable: <explanation> */}
 				{imageLinks.map((imageLink) => (
-					<Link key={imageLink.alt} href={imageLink.href}>
-						<Image src={imageLink.src} alt={imageLink.alt} />
-					</Link>
+					<Box>
+						<Link key={imageLink.alt} href={`works/${imageLink.workId}`}>
+							<Image
+								src={imageLink.src}
+								alt={imageLink.alt}
+								width={260}
+								height={200}
+							/>
+						</Link>
+						{/* <Title order={4}>{imageLink.title}</Title> */}
+					</Box>
 				))}
 			</SimpleGrid>
 		</Container>
