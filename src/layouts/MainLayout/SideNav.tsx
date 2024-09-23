@@ -2,15 +2,22 @@
 import { Accordion, Text } from "@mantine/core";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import c from "./SideNav.module.css";
 
-const links = [
+type LinkItem = {
+	href: string;
+	emoji: string;
+	label: string;
+	description: string;
+};
+
+const links: LinkItem[] = [
 	{
 		href: "/",
 		emoji: "🏠",
 		label: "Top",
-		description: "よろしく！",
+		description: "ようこそ...🍵",
 	},
 	{
 		href: "/works",
@@ -22,7 +29,7 @@ const links = [
 		href: "/about",
 		emoji: "😎",
 		label: "About",
-		description: "自己紹介ページ",
+		description: "よろしくお願いします！",
 	},
 ] as const;
 
@@ -36,26 +43,27 @@ export function SideNav() {
 		setActiveItem(activeLink ? activeLink.href : null);
 	}, [pathname]);
 
-	const items = links.map((link) => (
-		<Accordion.Item key={link.href} value={link.href}>
-			{link.href === activeItem ? (
-				<Link href={link.href} className={c.link}>
-					<Accordion.Control icon={link.emoji} className={c.selectedControl}>
-						{link.label}
-					</Accordion.Control>
-					<Accordion.Panel>
-						<Text size="sm">{link.description}</Text>
-					</Accordion.Panel>
-				</Link>
-			) : (
-				<Link href={link.href} className={c.link}>
-					<Accordion.Control icon={link.emoji} className={c.unSelectedControl}>
-						{link.label}
-					</Accordion.Control>
-				</Link>
-			)}
-		</Accordion.Item>
-	));
+	const items = useMemo(() => {
+		return links.map((link) => {
+			const isActive = link.href === activeItem;
+			const controlClass = isActive ? c.selectedControl : c.unSelectedControl;
+
+			return (
+				<Accordion.Item key={link.href} value={link.href}>
+					<Link href={link.href} className={c.link}>
+						<Accordion.Control icon={link.emoji} className={controlClass}>
+							{link.label}
+						</Accordion.Control>
+						{isActive && (
+							<Accordion.Panel>
+								<Text size="sm">{link.description}</Text>
+							</Accordion.Panel>
+						)}
+					</Link>
+				</Accordion.Item>
+			);
+		});
+	}, [activeItem]);
 
 	return (
 		<Accordion
