@@ -13,9 +13,6 @@
 }
 .button {
   flex: 1;
-  &:hover{
-    
-  }
   &:active{
     color: var(--mantine-color-red-5);
   }

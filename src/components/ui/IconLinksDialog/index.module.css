@@ -1,0 +1,9 @@
+.button {
+  &:active{
+    color: var(--mantine-color-red-5);
+  }
+}
+
+.dialog{
+  border: 1px solid var(--mantine-color-indigo-outline);
+}

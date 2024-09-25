@@ -1,7 +1,8 @@
 import c from "./Header.module.css";
 
-import { Box, Button, Container, Group, Text } from "@mantine/core";
+import { Container } from "@mantine/core";
 import { ActiveButton } from "~/components/ui/ActiveLink/ActiveButton";
+import { IconLinksDialog } from "~/components/ui/IconLinksDialog";
 
 const links = [
 	{ href: "/", label: "Top" },
@@ -25,9 +26,7 @@ export function Header() {
 						{link.label}
 					</ActiveButton>
 				))}
-				<Button variant="outline" color="indigo" className={c.button}>
-					Links
-				</Button>
+				<IconLinksDialog>Links</IconLinksDialog>{" "}
 			</Container>
 		</header>
 	);
