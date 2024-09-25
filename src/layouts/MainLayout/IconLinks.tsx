@@ -2,9 +2,9 @@
 
 import { Anchor, Box, SimpleGrid } from "@mantine/core";
 import { ActionThemeIcon } from "~/components/Theme/ActionThemeIcon";
-import { AppleSvg } from "~/icons/AppleSvg";
-import { GithubSvg } from "~/icons/GithubSvg";
-import { XiconSvg } from "~/icons/XiconSvg";
+import { AppleSvg } from "~/icons/linkIcons/AppleSvg";
+import { GithubSvg } from "~/icons/linkIcons/GithubSvg";
+import { XiconSvg } from "~/icons/linkIcons/XiconSvg";
 import c from "./IconLinks.module.css";
 
 export function IconLinks() {

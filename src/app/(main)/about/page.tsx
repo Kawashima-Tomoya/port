@@ -1,19 +1,22 @@
 import { Avatar, Container, Group, Space, Text, Title } from "@mantine/core";
 import { CopyBtn } from "~/components/ui/CopyButton/CopyBtn";
 import { BorderContainer } from "~/components/ui/StyledContainer/BorderContainer";
+import { GithubSvg } from "~/icons/linkIcons/GithubSvg";
 import {
 	CSS,
 	Figma,
+	Github,
 	HTML,
 	Java,
 	JavaScript,
+	Mantine,
 	Nextjs,
 	React,
 	Slack,
 	TailwindCss,
 	TypeScript,
 	VisualStudioCode,
-} from "~/icons/ImportSkillIcons";
+} from "~/icons/skillIcons/index";
 
 export default function Page() {
 	return (
@@ -65,6 +68,7 @@ export default function Page() {
 					<React />
 					<Nextjs />
 					<TailwindCss />
+					<Mantine />
 				</Group>
 
 				<Title order={3} mt="lg">
@@ -73,6 +77,7 @@ export default function Page() {
 				<Group mt="xs">
 					<VisualStudioCode />
 					<Figma />
+					<Github />
 					<Slack />
 				</Group>
 			</BorderContainer>
