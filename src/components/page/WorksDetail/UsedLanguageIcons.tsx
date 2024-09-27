@@ -1,13 +1,14 @@
 import { Group, Text, Title } from "@mantine/core";
 import { useMemo } from "react";
 import { BorderContainer } from "~/components/ui/StyledContainer/BorderContainer";
-import { Biomejs } from "~/icons/skillIcons/BiomejsSvg";
 import {
+	Biomejs,
 	CSS,
 	HTML,
 	Mantine,
 	Nextjs,
 	React,
+	Sass,
 	TailwindCss,
 	TypeScript,
 } from "~/icons/skillIcons/index";
@@ -42,12 +43,13 @@ export function UsedLanguageIcon(props: Props) {
 						<Biomejs />
 					</Group>
 				);
-			// case 3:
-			// 	return (
-			// 		<Group mt="xs">
-			// 			<Java />
-			// 		</Group>
-			// 	);
+			case 3:
+				return (
+					<Group mt="xs">
+						<HTML />
+						<Sass />
+					</Group>
+				);
 			default:
 				return <Text>使用言語なし</Text>;
 		}

@@ -31,7 +31,7 @@
   overflow: hidden;
   transition: transform .2s ease-in;
   &:hover{
-    transform: scale(1.02);
+    transform: scale(1.01);
     opacity: 0.9;
   }
 }

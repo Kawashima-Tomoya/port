@@ -12,3 +12,5 @@ export * from "~/icons/skillIcons/TypeScriptSvg";
 export * from "~/icons/skillIcons/VSCodeSvg";
 export * from "~/icons/skillIcons/GithubSvg";
 export * from "~/icons/skillIcons/MantineSvg";
+export * from "~/icons/skillIcons/BiomejsSvg";
+export * from "~/icons/skillIcons/SassSvg";
