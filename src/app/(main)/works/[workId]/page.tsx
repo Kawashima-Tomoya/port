@@ -1,4 +1,4 @@
-import { Anchor, Button, Container, Text } from "@mantine/core";
+import { Anchor, Button, Container, Space, Text } from "@mantine/core";
 import Image from "next/image";
 import Link from "next/link";
 import { WorksDetail } from "~/components/page/WorksDetail";
@@ -35,6 +35,7 @@ export default function Page(props: Props) {
 			>
 				⇦ 一覧へ
 			</Button>
+			<Space h="xs" />
 			<Anchor href={imageLink?.href} target="_blank" rel="noopener noreferrer">
 				<Image
 					src={imageLink?.src ?? "/no-image.png"}
@@ -44,6 +45,7 @@ export default function Page(props: Props) {
 					priority={true}
 				/>
 			</Anchor>
+			<Space h="xs" />
 			<WorksDetail
 				workId={workId}
 				title={workDetail.title}
