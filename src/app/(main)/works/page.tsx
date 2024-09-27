@@ -1,6 +1,7 @@
 import { Box, Container, Image, SimpleGrid, Title } from "@mantine/core";
 import Link from "next/link";
 import { imageLinks } from "~/components/page/WorksDetail/data";
+import c from "./index.module.css";
 
 export default function Page() {
 	return (
@@ -15,6 +16,7 @@ export default function Page() {
 								alt={imageLink.alt}
 								width={260}
 								height={200}
+								className={c.img}
 							/>
 						</Link>
 						{/* <Title order={4}>{imageLink.title}</Title> */}

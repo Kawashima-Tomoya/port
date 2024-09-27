@@ -29,7 +29,8 @@ export default function Page() {
 					<Text size="sm">
 						北海道札幌市出身の26歳
 						<br /> フロントエンドの技術が好きで独学で勉強してます！
-						<br /> 新しいモノ好き。
+						<br /> 最近はカワイイスニーカーをゲットすることにハマっています👟
+						<br />
 					</Text>
 				</Group>
 
@@ -47,7 +48,7 @@ export default function Page() {
 				/>
 			</BorderContainer>
 
-			<Space h="xl" />
+			<Space h="lg" />
 
 			<Title order={2}>Skills</Title>
 			<BorderContainer>

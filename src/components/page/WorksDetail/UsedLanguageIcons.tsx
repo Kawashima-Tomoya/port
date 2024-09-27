@@ -1,5 +1,6 @@
 import { Group, Text, Title } from "@mantine/core";
 import { useMemo } from "react";
+import { BorderContainer } from "~/components/ui/StyledContainer/BorderContainer";
 import { Biomejs } from "~/icons/skillIcons/BiomejsSvg";
 import {
 	CSS,
@@ -53,11 +54,9 @@ export function UsedLanguageIcon(props: Props) {
 	}, [props.id]);
 
 	return (
-		<div>
-			<Title order={3} mt="lg">
-				使用言語
-			</Title>
+		<BorderContainer mt="md">
+			<Title order={3}>使用言語</Title>
 			{iconList}
-		</div>
+		</BorderContainer>
 	);
 }

@@ -16,12 +16,17 @@ export default function Page() {
 				<br />
 			</Text>
 
-			<Space h="xl" />
+			<Space h="lg" />
 
 			<Title order={2}>About This Site</Title>
 			<BorderContainer>
-				<Title order={3}>Concept</Title>
-				<Text mt="xs">シンプルな静的サイト</Text>
+				<Title order={3}>コンセプト</Title>
+				<Text mt="xs">
+					まずは手を動かして何か作成することが重要だと考え、このサイトを作成しました。
+					開発効率を考え、UIコンポーネントライブラリであるMantineを採用。
+					デザインは事前に決めず、徐々に調整していきました。
+				</Text>
+
 				<Title order={3} mt="lg">
 					使用技術
 				</Title>
@@ -34,11 +39,10 @@ export default function Page() {
 				</List>
 			</BorderContainer>
 
-			<Space h="xl" />
+			<Space h="lg" />
 
 			<Title order={2}>To Be Updated...</Title>
 			<BorderContainer>
-				<Text>- レスポンシブ対応</Text>
 				<Text>- お問い合わせフォームの実装</Text>
 			</BorderContainer>
 		</Container>

@@ -5,7 +5,7 @@ export function WorksDetail(props: WorkDetails) {
 	return (
 		<Box>
 			<Title order={3}>{props.title}</Title>
-			<Text>{props.description}</Text>
+			<Text mt="xs">{props.description}</Text>
 		</Box>
 	);
 }

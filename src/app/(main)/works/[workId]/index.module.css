@@ -28,4 +28,10 @@
   object-fit: contain;
   position: relative !important;
   width: 100%;
+  overflow: hidden;
+  transition: transform .2s ease-in;
+  &:hover{
+    transform: scale(1.02);
+    opacity: 0.9;
+  }
 }
