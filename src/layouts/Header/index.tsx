@@ -1,4 +1,4 @@
-import c from "./Header.module.css";
+import c from "./index.module.css";
 
 import { Container } from "@mantine/core";
 import { ActiveButton } from "~/components/ui/ActiveLink/ActiveButton";

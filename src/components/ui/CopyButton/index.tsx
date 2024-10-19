@@ -2,6 +2,7 @@
 
 import { Button, CopyButton } from "@mantine/core";
 import type { ButtonProps, CopyButtonProps } from "@mantine/core";
+import c from "./index.module.css";
 
 type CopyBtnProps = {
 	copiedText: string;
@@ -26,6 +27,7 @@ export function CopyBtn({
 					{...rest}
 					color={copied ? copiedColor : unCopiedColor}
 					onClick={copy}
+					className={c.button}
 				>
 					{copied ? copiedText : unCopiedText}
 				</Button>

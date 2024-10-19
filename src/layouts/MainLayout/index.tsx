@@ -1,7 +1,7 @@
 import { Container, Flex, MantineProvider, Stack } from "@mantine/core";
 import type { ReactNode } from "react";
-import { Footer } from "~/layouts/MainLayout/Footer";
-import { Header } from "~/layouts/MainLayout/Header";
+import { Footer } from "~/layouts/Footer";
+import { Header } from "~/layouts/Header";
 import { IconLinks } from "~/layouts/MainLayout/IconLinks";
 import { SideNav } from "~/layouts/MainLayout/SideNav";
 import { theme } from "~/layouts/MantineTheme/theme";
@@ -19,7 +19,7 @@ export function MainLayout({ children }: { children: ReactNode }) {
 					</Stack>
 					<main className={c.main}>{children}</main>
 				</Flex>
-				<Footer />
+				<Footer href="/contact">お問い合わせ</Footer>
 			</Container>
 		</MantineProvider>
 	);
