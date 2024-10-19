@@ -41,10 +41,10 @@ export default function Page() {
 
 			<Space h="lg" />
 
-			<Title order={2}>To Be Updated...</Title>
+			{/* <Title order={2}>To Be Updated...</Title>
 			<BorderContainer>
 				<Text>- お問い合わせフォームの実装</Text>
-			</BorderContainer>
+			</BorderContainer> */}
 		</Container>
 	);
 }

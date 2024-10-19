@@ -34,11 +34,14 @@
 	"typescript.tsdk": "node_modules/typescript/lib",
 	"cSpell.ignoreWords": [
 		"Avenir",
+		"HUBSPOT",
 		"TOMOYA",
 		"Xicon",
+		"firstname",
 		"iconlink",
 		"instasave",
 		"kawashima",
+		"lastname",
 		"microcms"
 	]
 }

@@ -1,7 +1,7 @@
 import { Avatar, Container, Group, Space, Text, Title } from "@mantine/core";
-import { CopyBtn } from "~/components/ui/CopyButton/CopyBtn";
+import { CopyBtn } from "~/components/ui/CopyButton";
+import { LinkButton } from "~/components/ui/LinkButton";
 import { BorderContainer } from "~/components/ui/StyledContainer/BorderContainer";
-import { GithubSvg } from "~/icons/linkIcons/GithubSvg";
 import {
 	CSS,
 	Figma,
@@ -37,15 +37,21 @@ export default function Page() {
 				<Title order={3} mt="lg" mb="xs">
 					Contact
 				</Title>
-				<CopyBtn
-					value="57kawashima@gmail.com"
-					timeout={3000}
-					variant="light"
-					copiedText="メールアドレスをコピーしました★"
-					unCopiedText="メールはこちら！"
-					copiedColor="cyan"
-					unCopiedColor="var(--mantine-color-text)"
-				/>
+				<Group>
+					<CopyBtn
+						value="57kawashima@gmail.com"
+						timeout={3000}
+						variant="light"
+						copiedText="メールアドレスをコピーしました★"
+						unCopiedText="メールはこちら！"
+						copiedColor="cyan"
+						unCopiedColor="light-dark(
+							var(--mantine-color-indigo-8),
+							var(--mantine-color-indigo-2)
+						);"
+					/>
+					<LinkButton href="/contact">お問い合わせ</LinkButton>
+				</Group>
 			</BorderContainer>
 
 			<Space h="lg" />
@@ -58,7 +64,6 @@ export default function Page() {
 					<CSS />
 					<JavaScript />
 					<TypeScript />
-					{/* <Nodejs /> */}
 					<Java />
 				</Group>
 
