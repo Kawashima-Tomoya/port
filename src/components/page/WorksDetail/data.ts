@@ -12,7 +12,7 @@ export type WorkDetails = {
 	description: string;
 };
 
-export const imageLinks: ImageLinks[] = [
+export const imageLinksData: ImageLinks[] = [
 	{
 		workId: 1,
 		src: "/portfolio.webp",
@@ -36,7 +36,7 @@ export const imageLinks: ImageLinks[] = [
 	},
 ] as const;
 
-export const workDetails: WorkDetails[] = [
+export const workDetailsData: WorkDetails[] = [
 	{
 		workId: 1,
 		title: "ポートフォリオサイト",

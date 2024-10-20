@@ -1,6 +1,6 @@
-import { Box, Container, Image, SimpleGrid, Title } from "@mantine/core";
+import { Box, Container, Image, SimpleGrid } from "@mantine/core";
 import Link from "next/link";
-import { imageLinks } from "~/components/page/WorksDetail/data";
+import { imageLinksData } from "~/components/page/WorksDetail/data";
 import c from "./index.module.css";
 
 export default function Page() {
@@ -8,7 +8,7 @@ export default function Page() {
 		<Container p="0">
 			<SimpleGrid cols={2}>
 				{/* biome-ignore lint/nursery/useJsxKeyInIterable: <explanation> */}
-				{imageLinks.map((imageLink) => (
+				{imageLinksData.map((imageLink) => (
 					<Box>
 						<Link key={imageLink.alt} href={`works/${imageLink.workId}`}>
 							<Image

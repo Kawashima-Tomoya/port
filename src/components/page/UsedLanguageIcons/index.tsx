@@ -14,12 +14,12 @@ import {
 } from "~/icons/skillIcons/index";
 
 type Props = {
-	id: number;
+	workId: number;
 };
 
 export function UsedLanguageIcon(props: Props) {
 	const iconList = useMemo(() => {
-		switch (props.id) {
+		switch (props.workId) {
 			case 1:
 				return (
 					<Group mt="xs">
@@ -53,10 +53,10 @@ export function UsedLanguageIcon(props: Props) {
 			default:
 				return <Text>使用言語なし</Text>;
 		}
-	}, [props.id]);
+	}, [props.workId]);
 
 	return (
-		<BorderContainer mt="md">
+		<BorderContainer>
 			<Title order={3}>使用言語</Title>
 			{iconList}
 		</BorderContainer>
