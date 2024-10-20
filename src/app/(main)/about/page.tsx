@@ -44,13 +44,10 @@ export default function Page() {
 						variant="light"
 						copiedText="メールアドレスをコピーしました★"
 						unCopiedText="メールはこちら！"
-						copiedColor="cyan"
-						unCopiedColor="light-dark(
-							var(--mantine-color-indigo-8),
-							var(--mantine-color-indigo-2)
-						);"
+						copiedColor="var(--mantine-color-red-text)"
+						unCopiedColor="var(--mantine-color-text)"
 					/>
-					<LinkButton href="/contact">お問い合わせ</LinkButton>
+					<LinkButton href="/contact">お問い合わせフォーム</LinkButton>
 				</Group>
 			</BorderContainer>
 
