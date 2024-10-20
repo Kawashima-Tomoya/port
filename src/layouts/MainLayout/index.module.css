@@ -28,6 +28,9 @@
     var(--mantine-color-lightBlue-5),
     var(--mantine-color-darkBlue-9)
   );
+  @media (max-width: $mantine-breakpoint-sm){
+    max-width: 100%;
+  }
   * {
     animation-name: fuwa;
     animation-duration: 0.3s;
