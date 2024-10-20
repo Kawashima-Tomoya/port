@@ -1,4 +1,12 @@
-import { Container, List, ListItem, Space, Text, Title } from "@mantine/core";
+import {
+	Box,
+	Container,
+	List,
+	ListItem,
+	Space,
+	Text,
+	Title,
+} from "@mantine/core";
 import { BorderContainer } from "~/components/ui/StyledContainer/BorderContainer";
 
 export default function Page() {
@@ -40,6 +48,19 @@ export default function Page() {
 			</BorderContainer>
 
 			<Space h="lg" />
+			<div>
+				<video
+					width="100%"
+					controls={false}
+					preload="true"
+					muted={true}
+					autoPlay={true}
+					loop={true}
+					disablePictureInPicture={true}
+				>
+					<source src="/game.mp4" type="video/mp4" />
+				</video>
+			</div>
 
 			{/* <Title order={2}>To Be Updated...</Title>
 			<BorderContainer>

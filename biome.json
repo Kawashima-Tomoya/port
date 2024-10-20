@@ -13,6 +13,9 @@
 			"correctness": {
 				"useExhaustiveDependencies": "off"
 			},
+			"a11y": {
+				"useMediaCaption": "off"
+			},
 			"nursery": {
 				"all": true,
 				"noNodejsModules": "off",
