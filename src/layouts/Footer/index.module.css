@@ -10,5 +10,6 @@
   padding-block: var(--mantine-spacing-md);
   @media (max-width: $mantine-breakpoint-xs) {
     flex-direction: column;
+    gap: 8px;
   }
 }

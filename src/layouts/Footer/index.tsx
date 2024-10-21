@@ -18,6 +18,7 @@ export function Footer({ children, href }: Props) {
 					variant="subtle"
 					size="xs"
 					c={"var(--mantine-color-dimmed)"}
+					className="button"
 				>
 					{children}
 				</LinkButton>
