@@ -7,8 +7,8 @@ export function Stars() {
 		<Box className={c.container}>
 			<div className={c.stars}>
 				<Image src="/hosi-blue.gif" alt="star" width={40} height={40} />
-				<Image src="/hosi-red.gif" alt="star" width={40} height={40} />
 				<Image src="/hosi-yel.gif" alt="star" width={40} height={40} />
+				<Image src="/hosi-red.gif" alt="star" width={40} height={40} />
 			</div>
 		</Box>
 	);
