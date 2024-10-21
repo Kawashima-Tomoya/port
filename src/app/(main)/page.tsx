@@ -43,7 +43,7 @@ export default function Page() {
 
 			<Space h="lg" />
 
-			<Video />
+			{navigator.userAgent.match(/iPhone|Android.+Mobile/) ? <></> : <Video />}
 			<Stars />
 		</Container>
 	);
