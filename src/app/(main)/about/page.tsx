@@ -23,10 +23,12 @@ export default function Page() {
 		<Container p="0">
 			<Title order={2}>Profile</Title>
 			<BorderContainer>
-				<Title order={3}>About Me</Title>
+				<Title order={3} mb="xs">
+					About Me
+				</Title>
 				<Group>
-					<Avatar size="xl" radius="50%" src="/me.webp" alt="it's me" mt="xs" />
-					<Text size="sm">
+					<Avatar size="xl" radius="50%" src="/me.webp" alt="it's me" />
+					<Text>
 						北海道札幌市出身の26歳
 						<br /> フロントエンドの技術が好きで独学で勉強してます！
 						<br /> 最近はスニーカーを集めることにハマっています👟
@@ -34,7 +36,9 @@ export default function Page() {
 					</Text>
 				</Group>
 
-				<Title order={3} mt="lg" mb="xs">
+				<Space h="lg" />
+
+				<Title order={3} mb="xs">
 					Contact
 				</Title>
 				<Group>
