@@ -1,0 +1,9 @@
+.container {
+  position: relative;
+}
+
+.stars {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
