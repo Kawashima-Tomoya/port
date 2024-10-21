@@ -1,6 +1,5 @@
 import { Container, List, ListItem, Space, Text, Title } from "@mantine/core";
 import { Stars } from "~/components/page/Gifs/Stars";
-import { Video } from "~/components/page/Video";
 import { BorderContainer } from "~/components/ui/StyledContainer/BorderContainer";
 
 export default function Page() {
@@ -40,10 +39,6 @@ export default function Page() {
 					<ListItem>フォーマッター : Biome</ListItem>
 				</List>
 			</BorderContainer>
-
-			<Space h="lg" />
-
-			{navigator.userAgent.match(/iPhone|Android.+Mobile/) ? <></> : <Video />}
 			<Stars />
 		</Container>
 	);
