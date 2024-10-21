@@ -1,5 +1,5 @@
 import { Container, List, ListItem, Space, Text, Title } from "@mantine/core";
-import { Stars } from "~/components/page/Gifs/Stars";
+import { Stars } from "~/components/page/Stars/Stars";
 import { BorderContainer } from "~/components/ui/StyledContainer/BorderContainer";
 
 export default function Page() {
