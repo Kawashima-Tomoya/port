@@ -7,6 +7,17 @@ import { useMountedColorScheme } from "./useMountedColorScheme";
 export function ActionThemeIcon(props: ActionIconProps) {
 	const { toggleColorScheme, colorScheme } = useMountedColorScheme();
 
+	const DisplayIcon = () => {
+		switch (colorScheme) {
+			case "dark":
+				return <IconSun size={24} stroke={1.5} color="var(--mantine-color-yellow-4)" />;
+			case "light":
+				return <IconMoon size={20} stroke={1.5} color="var(--mantine-color-blue-7)" />;
+			default:
+				return null;
+		}
+	}
+
 	return (
 		<ActionIcon
 			variant="transparent"
@@ -15,11 +26,7 @@ export function ActionThemeIcon(props: ActionIconProps) {
 			loading={colorScheme === undefined}
 			{...props}
 		>
-			{colorScheme === "light" ? (
-				<IconMoon size={20} stroke={1.5} color="var(--mantine-color-blue-7)" />
-			) : (
-				<IconSun size={24} stroke={1.5} color="var(--mantine-color-yellow-4)" />
-			)}
+			<DisplayIcon />
 		</ActionIcon>
 	);
 }

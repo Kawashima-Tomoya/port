@@ -9,7 +9,7 @@ export async function createContactData(
 	_prevState: Record<string, unknown>,
 	formData: FormData,
 ) {
-	// formのname属性ごとにformData.get()で値を取り出す
+
 	const rawFormData = {
 		lastname: formData.get("lastname") as string,
 		firstname: formData.get("firstname") as string,
