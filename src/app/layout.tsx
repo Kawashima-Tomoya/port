@@ -15,10 +15,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 	return (
 		<html lang="ja">
 			<head>
-				<ColorSchemeScript defaultColorScheme="auto" />
+				<ColorSchemeScript defaultColorScheme="dark" />
 			</head>
 			<body>
-				<MantineProvider defaultColorScheme="auto">{children}</MantineProvider>
+				<MantineProvider defaultColorScheme="dark">{children}</MantineProvider>
 			</body>
 		</html>
 	);

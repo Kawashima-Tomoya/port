@@ -1,32 +1,36 @@
-"use client";
-
-import { ActionIcon, type ActionIconProps } from "@mantine/core";
+import {
+	ActionIcon,
+	useComputedColorScheme,
+	useMantineColorScheme,
+} from "@mantine/core";
 import { IconMoon, IconSun } from "@tabler/icons-react";
-import { useMountedColorScheme } from "./useMountedColorScheme";
+import cx from "clsx";
+import c from "./ActionThemeIcon.module.css";
 
-export function ActionThemeIcon(props: ActionIconProps) {
-	const { toggleColorScheme, colorScheme } = useMountedColorScheme();
-
-	const DisplayIcon = () => {
-		switch (colorScheme) {
-			case "dark":
-				return <IconSun size={24} stroke={1.5} color="var(--mantine-color-yellow-4)" />;
-			case "light":
-				return <IconMoon size={20} stroke={1.5} color="var(--mantine-color-blue-7)" />;
-			default:
-				return null;
-		}
-	}
+export function ActionThemeIcon() {
+	const { setColorScheme } = useMantineColorScheme();
+	const computedColorScheme = useComputedColorScheme("light", {
+		getInitialValueInEffect: true,
+	});
 
 	return (
 		<ActionIcon
+			onClick={() =>
+				setColorScheme(computedColorScheme === "light" ? "dark" : "light")
+			}
 			variant="transparent"
-			aria-label="Toggle theme"
-			onClick={toggleColorScheme}
-			loading={colorScheme === undefined}
-			{...props}
+			aria-label="Toggle color scheme"
 		>
-			<DisplayIcon />
+			<IconSun
+				className={cx(c.icon, c.light)}
+				stroke={1.5}
+				color="var(--mantine-color-yellow-4)"
+			/>
+			<IconMoon
+				className={cx(c.icon, c.dark)}
+				stroke={1.5}
+				color="var(--mantine-color-blue-7)"
+			/>
 		</ActionIcon>
 	);
 }
