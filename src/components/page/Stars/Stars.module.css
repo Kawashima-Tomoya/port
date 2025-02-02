@@ -1,14 +1,11 @@
 .container {
-  height: rem(120px);
+  height: 30vh;
   position: relative;
 }
 
 .stars {
+  height: auto;
   position: absolute;
   bottom: 0;
   right: 0;
-}
-
-.star {
-  user-select: none;
 }

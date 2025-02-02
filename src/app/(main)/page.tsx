@@ -21,16 +21,7 @@ export default function Page() {
 
 			<Title order={2}>About This Site</Title>
 			<BorderContainer>
-				<Title order={3}>コンセプト</Title>
-				<Text mt="xs">
-					まずは手を動かして何か作成することが重要だと考え、このサイトを作成しました。
-					開発効率を考え、UIコンポーネントライブラリであるMantineを採用。
-					デザインは事前に決めず、徐々に調整していきました。
-				</Text>
-
-				<Title order={3} mt="lg">
-					使用技術
-				</Title>
+				<Title order={3}>使用技術</Title>
 				<List size="sm" mt="xs">
 					<ListItem>言語 : React.JS, TypeScript</ListItem>
 					<ListItem>フレームワーク : Next.JS</ListItem>
