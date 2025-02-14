@@ -14,3 +14,5 @@ export * from "~/icons/skillIcons/GithubSvg";
 export * from "~/icons/skillIcons/MantineSvg";
 export * from "~/icons/skillIcons/BiomejsSvg";
 export * from "~/icons/skillIcons/SassSvg";
+export * from "~/icons/skillIcons/V0Svg";
+export * from "~/icons/skillIcons/ESLintSvg";
