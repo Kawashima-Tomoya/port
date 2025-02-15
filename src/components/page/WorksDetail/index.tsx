@@ -1,11 +1,31 @@
 import { Box, Text, Title } from "@mantine/core";
-import type { WorkDetails } from "~/components/page/WorksDetail/data";
+import { type WorkDetails, workDetailsTitleData } from "./data";
 
-export function WorksDetail(props: WorkDetails) {
+type DescriptionKey = keyof WorkDetails["description"];
+
+export function WorksDetail({ title, description }: WorkDetails) {
+	const descriptionKeys: DescriptionKey[] = [
+		"main",
+		"motive",
+		"feature",
+		"design",
+		"doNot",
+	];
+
 	return (
 		<Box>
-			<Title order={3}>{props.title}</Title>
-			<Text mt="xs">{props.description}</Text>
+			<Title order={2}>{title}</Title>
+			{/* biome-ignore lint/nursery/useJsxKeyInIterable: <explanation> */}
+			{descriptionKeys.map((key) => (
+				<div>
+					<Title key={key} order={4} mt="sm">
+						{workDetailsTitleData[0][key]}
+					</Title>
+					<Text key={key} mb="sm">
+						{description[key]}
+					</Text>
+				</div>
+			))}
 		</Box>
 	);
 }

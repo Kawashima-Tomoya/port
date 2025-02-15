@@ -4,6 +4,7 @@ import { BorderContainer } from "~/components/ui/StyledContainer/BorderContainer
 import {
 	Biomejs,
 	CSS,
+	ESLint,
 	HTML,
 	Mantine,
 	Nextjs,
@@ -11,6 +12,7 @@ import {
 	Sass,
 	TailwindCss,
 	TypeScript,
+	V0,
 } from "~/icons/skillIcons/index";
 
 type Props = {
@@ -47,9 +49,29 @@ export function UsedLanguageIcon(props: Props) {
 				return (
 					<Group mt="xs">
 						<HTML />
+						<TailwindCss />
+						<V0 />
+						<TypeScript />
+						<React />
+						<Nextjs />
+						<ESLint />
+					</Group>
+				);
+			case 4:
+				return (
+					<Group mt="xs">
+						<HTML />
 						<Sass />
 					</Group>
 				);
+
+			// case 5:
+			// 	return (
+			// 		<Group mt="xs">
+			// 			<HTML />
+			// 			<Sass />
+			// 		</Group>
+			// 	);
 			default:
 				return <Text>使用言語なし</Text>;
 		}

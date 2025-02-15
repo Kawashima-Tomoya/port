@@ -14,6 +14,14 @@ export const repositoriesData: Repositories[] = [
 	},
 	{
 		workId: 3,
+		href: "https://github.com/Kawashima-Tomoya/motion-tenki",
+	},
+	{
+		workId: 4,
 		href: "https://github.com/Kawashima-Tomoya/Blog",
+	},
+	{
+		workId: 5,
+		href: "https://github.com/Kawashima-Tomoya/",
 	},
 ] as const;
