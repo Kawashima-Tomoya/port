@@ -1,6 +1,3 @@
-.icon {
-}
-
 .dark {
   @mixin dark {
     display: none;
