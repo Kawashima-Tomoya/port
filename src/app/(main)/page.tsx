@@ -1,21 +1,12 @@
 import { Container, List, ListItem, Space, Text, Title } from "@mantine/core";
-import SplitText from "~/Animations/AnimatedContainer/SplitText/SplitText";
-// import { SplitText } from "~/components/page/SplitText";
+import { ClientSplitText } from "~/components/page/SplitText";
 import { Stars } from "~/components/page/Stars/Stars";
 import { BorderContainer } from "~/components/ui/StyledContainer/BorderContainer";
 
 export default function Page() {
 	return (
 		<Container p="0">
-			<SplitText
-				text="KAWASHIMA TOMOYA'S LAB"
-				delay={80}
-				animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
-				animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
-				// easing="easeOutCubic"
-				threshold={0.2}
-			/>
-			{/* <Title order={1}>KAWASHIMA TOMOYA'S LAB</Title> */}
+			<ClientSplitText />
 			<Space h="lg" />
 			<Text>
 				こんにちは。このサイトはKawashimaのポートフォリオサイトです。

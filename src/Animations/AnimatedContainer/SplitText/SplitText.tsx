@@ -15,7 +15,7 @@ interface SplitTextProps {
 	onLetterAnimationComplete?: () => void;
 }
 
-const SplitText: React.FC<SplitTextProps> = ({
+export const SplitText: React.FC<SplitTextProps> = ({
 	text = "",
 	className = "",
 	delay = 100,
