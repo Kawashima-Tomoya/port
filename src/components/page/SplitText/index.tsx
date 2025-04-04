@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { SplitText } from "~/Animations/AnimatedContainer/SplitText/SplitText";
+import { SplitText } from "~/Animations/TextAnimations/SplitText/SplitText";
 
 export function ClientSplitText() {
 	const [isClient, setIsClient] = useState(false);
