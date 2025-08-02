@@ -1,21 +1,27 @@
 .dark {
-  @mixin dark {
-    display: none;
-  }
-
-  @mixin light {
-    display: block;
-    fill: #000;
-  }
+  display: none;
+  fill: #000;
 }
 
 .light {
-  @mixin light {
-    display: none;
-  }
+  display: block;
+  fill: #fff;
+}
 
-  @mixin dark {
-    display: block;
-    fill: #fff;
-  }
+[data-mantine-color-scheme="dark"] .dark {
+  display: block;
+  fill: #000;
+}
+
+[data-mantine-color-scheme="dark"] .light {
+  display: none;
+}
+
+[data-mantine-color-scheme="light"] .dark {
+  display: none;
+}
+
+[data-mantine-color-scheme="light"] .light {
+  display: block;
+  fill: #fff;
 }
