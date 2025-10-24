@@ -17,4 +17,4 @@ export * from "~/icons/skillIcons/SassSvg";
 export * from "~/icons/skillIcons/V0Svg";
 export * from "~/icons/skillIcons/ESLintSvg";
 export * from "~/icons/skillIcons/GeminiSvg";
-export * from "~/icons/skillIcons/shadcnSvg";
+export * from "~/icons/skillIcons/ShadcnSvg";
