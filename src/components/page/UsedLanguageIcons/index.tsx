@@ -5,16 +5,16 @@ import {
 	Biomejs,
 	CSS,
 	ESLint,
-	HTML,
+	Figma,
+	Gemini,
 	Mantine,
 	Nextjs,
 	React,
-	Sass,
+	Shadcn,
 	TailwindCss,
 	TypeScript,
 	V0,
 } from "~/icons/skillIcons/index";
-
 type Props = {
 	workId: number;
 };
@@ -25,19 +25,17 @@ export function UsedLanguageIcon(props: Props) {
 			case 1:
 				return (
 					<Group mt="xs">
-						<HTML />
-						<CSS />
-						<Mantine />
 						<TypeScript />
 						<React />
 						<Nextjs />
+						<CSS />
+						<Mantine />
 						<Biomejs />
 					</Group>
 				);
 			case 2:
 				return (
 					<Group mt="xs">
-						<HTML />
 						<TailwindCss />
 						<TypeScript />
 						<React />
@@ -48,30 +46,36 @@ export function UsedLanguageIcon(props: Props) {
 			case 3:
 				return (
 					<Group mt="xs">
-						<HTML />
-						<TailwindCss />
-						<V0 />
 						<TypeScript />
 						<React />
 						<Nextjs />
+						<TailwindCss />
+						<V0 />
 						<ESLint />
 					</Group>
 				);
 			case 4:
 				return (
 					<Group mt="xs">
-						<HTML />
-						<Sass />
+						<TypeScript />
+						<React />
+						<Nextjs />
+						<TailwindCss />
+						<Figma />
 					</Group>
 				);
 
-			// case 5:
-			// 	return (
-			// 		<Group mt="xs">
-			// 			<HTML />
-			// 			<Sass />
-			// 		</Group>
-			// 	);
+			case 5:
+				return (
+					<Group mt="xs">
+						<TypeScript />
+						<React />
+						<Nextjs />
+						<TailwindCss />
+						<Shadcn />
+						<Gemini />
+					</Group>
+				);
 			default:
 				return <Text>使用言語なし</Text>;
 		}

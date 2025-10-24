@@ -8,10 +8,10 @@ export type ImageLinks = {
 
 export type WorkDetailsTitle = {
 	main: string;
-	motive: string;
-	feature: string;
+	motive?: string;
+	feature?: string;
 	design?: string;
-	doNot: string;
+	doNot?: string;
 };
 
 export type WorkDetails = {
@@ -19,10 +19,10 @@ export type WorkDetails = {
 	title: string;
 	description: {
 		main: string;
-		motive: string;
-		feature: string;
+		motive?: string;
+		feature?: string;
 		design?: string;
-		doNot: string;
+		doNot?: string;
 	};
 };
 
@@ -32,7 +32,7 @@ export const imageLinksData: ImageLinks[] = [
 		src: "/portfolio.webp",
 		alt: "portfolio",
 		title: "ポートフォリオサイト",
-		href: "https://port-three-vert.vercel.app/",
+		href: "https://port-three-vert.vercel.app",
 	},
 	{
 		workId: 2,
@@ -46,23 +46,23 @@ export const imageLinksData: ImageLinks[] = [
 		src: "/motion-tenki.webp",
 		alt: "tenki",
 		title: "お天気アプリ",
-		href: "https://motion-tenki.vercel.app/",
+		href: "https://motion-tenki.vercel.app",
 	},
 	{
 		workId: 4,
-		src: "/Blog.webp",
-		alt: "blog",
-		title: "架空Blog",
-		href: "https://kawashima-tomoya.github.io/Blog/",
+		src: "/gallery.webp",
+		alt: "gallery",
+		title: "職業訓練作品の掲載ページ",
+		href: "https://gallery-eta-blue.vercel.app",
 	},
 
-	// {
-	// 	workId: 5,
-	// 	src: "/Blog.webp",
-	// 	alt: "timer",
-	// 	title: "",
-	// 	href: "https://kawashima-tomoya.github.io/timer/",
-	// },
+	{
+		workId: 5,
+		src: "/AI-fortune.webp",
+		alt: "AI-fortune",
+		title: "AI占いアプリ",
+		href: "https://ai-fortune-zeta.vercel.app",
+	},
 ] as const;
 
 export const workDetailsTitleData: WorkDetailsTitle[] = [
@@ -86,7 +86,7 @@ export const workDetailsData: WorkDetails[] = [
 			feature:
 				"Biomeの採用: フォーマッターはESLint+Prettierではなく、セットアップが簡単で高速さ話題のBiomeを採用しました。",
 			design:
-				"Mantineの採用: Mantineのアコーディオンをナビゲーション用に改修し、シンプルにまとめました。",
+				"Mantineの採用: Mantineのアコーディオンをナビゲーション用に改修し、シンプルで今どきにまとめました。",
 			doNot:
 				"データベース不使用: 今回は制作の時間的コストを考え、できるだけ短期間かつ簡潔にするため、データベースは使用せず配列で管理しました。",
 		},
@@ -121,29 +121,29 @@ export const workDetailsData: WorkDetails[] = [
 	},
 	{
 		workId: 4,
-		title: "架空ブログサイト",
+		title: "職業訓練作品の掲載ページ",
 		description: {
-			main: "昔に模写コーディングで制作したブログサイトです。",
+			main: "訓練校で作成した作品をまとめたギャラリーページです。",
 			motive:
-				"HTML・CSSの基礎学習とデザインの勉強を兼ねて、模写コーディングで制作しました。",
+				"今回の職業訓練ではコーディングだけでなくデザインや動画編集、マーケティング、AIツールの活用方法など幅広く学習したため、それらをまとめて掲載しました。",
 			feature:
-				"掲載するか迷いましたが、コンテンツ量が少なく、寂しかったので穴埋め要員になってもらいました。",
-			design: "2カラムレイアウトでレスポンシブ対応もしています。",
-			doNot:
-				"jsの実装: 当時はjsの学習が浅く、優先順位を考慮してjsの実装は行っていません。",
+				"mo.jsとmotionを使用したアニメーション: mo.jsとmotionを組み合わせて、動きのあるギャラリーページにしました。",
+			design:
+				"幅広いことを学び、多くの人と関わることのできる訓練校をイメージし、カラフルでポップなデザインにしました。",
 		},
 	},
 
-	// {
-	// 	workId: 5,
-	// 	title: "タイマーアプリ",
-	// 	description: {
-	// 		main: "現在閲覧していただいてる当サイトです。",
-	// 		motive:
-	// 			"自分で手を動かしイチから何かを完成させることが大切だと思い作成に至りました。",
-	// 		feature: "",
-	// 		doNot:
-	// 			"今回は制作のコストを考え、できるだけ短期間かつ簡潔にするため、データベースは使用せず配列で管理しました。",
-	// 	},
-	// },
+	{
+		workId: 5,
+		title: "AI占いアプリ",
+		description: {
+			main: "生年月日＋血液型を入力するとAIが占いをしてくれるアプリです。",
+			motive:
+				"生成AIのAPIを使用したアプリを作成してみたかったため、制作に至りました。",
+			feature:
+				"Gemini API: 生成AIにはGoogleのGemini APIを使用し、プロンプトにも工夫を凝らしました。",
+			doNot:
+				"デザイン: 今回は生成AIのAPIを試すことを主目的としたため、おおまかなデザインはAIに任せ、後から調整を加える形で実装しました。",
+		},
+	},
 ] as const;
