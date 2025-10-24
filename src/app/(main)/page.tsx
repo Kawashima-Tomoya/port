@@ -8,7 +8,7 @@ export default function Page() {
 			<Title order={1}>KAWASHIMA Portfolio</Title>
 			<Space h="lg" />
 			<Text>
-				こんにちは。このサイトはKawashimaのポートフォリオサイトです。
+				こんにちは。このサイトはカワシマのポートフォリオサイトです。
 				<br />
 				勉強の過程で作成した制作物、身につけたスキルをまとめています。
 				<br />

@@ -6,7 +6,6 @@ import {
 	CSS,
 	ESLint,
 	Figma,
-	Gemini,
 	Mantine,
 	Nextjs,
 	React,
@@ -73,7 +72,6 @@ export function UsedLanguageIcon(props: Props) {
 						<Nextjs />
 						<TailwindCss />
 						<Shadcn />
-						<Gemini />
 					</Group>
 				);
 			default:
