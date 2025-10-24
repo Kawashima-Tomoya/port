@@ -9,7 +9,6 @@ export async function createContactData(
 	_prevState: Record<string, unknown>,
 	formData: FormData,
 ) {
-
 	const rawFormData = {
 		lastname: formData.get("lastname") as string,
 		firstname: formData.get("firstname") as string,
@@ -55,60 +54,62 @@ export async function createContactData(
 		};
 	}
 
-	const result = await fetch(
-		`https://api.hsforms.com/submissions/v3/integration/submit/${process.env.HUBSPOT_PORTAL_ID}/${process.env.HUBSPOT_FORM_ID}`,
-		{
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify({
-				fields: [
-					{
-						objectTypeId: "0-1",
-						name: "lastname",
-						value: rawFormData.lastname,
-					},
-					{
-						objectTypeId: "0-1",
-						name: "firstname",
-						value: rawFormData.firstname,
-					},
-					{
-						objectTypeId: "0-1",
-						name: "company",
-						value: rawFormData.company,
-					},
-					{
-						objectTypeId: "0-1",
-						name: "email",
-						value: rawFormData.email,
-					},
-					{
-						objectTypeId: "0-1",
-						name: "message",
-						value: rawFormData.message,
-					},
-				],
-			}),
-		},
-	);
-
-	if (!result.ok) {
-		return {
-			status: "error",
-			message: "サーバーエラーが発生しました",
-		};
-	}
-
 	try {
-		await result.json();
-	} catch (e) {
+		const result = await fetch(
+			`https://api.hsforms.com/submissions/v3/integration/submit/${process.env.HUBSPOT_PORTAL_ID}/${process.env.HUBSPOT_FORM_ID}`,
+			{
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({
+					fields: [
+						{
+							objectTypeId: "0-1",
+							name: "lastname",
+							value: rawFormData.lastname,
+						},
+						{
+							objectTypeId: "0-1",
+							name: "firstname",
+							value: rawFormData.firstname,
+						},
+						{
+							objectTypeId: "0-1",
+							name: "company",
+							value: rawFormData.company,
+						},
+						{
+							objectTypeId: "0-1",
+							name: "email",
+							value: rawFormData.email,
+						},
+						{
+							objectTypeId: "0-1",
+							name: "message",
+							value: rawFormData.message,
+						},
+					],
+				}),
+			},
+		);
+
+		if (!result.ok) {
+			// biome-ignore lint/nursery/noConsole: サーバーサイドでのエラーログ出力のため
+			console.error(`HubSpot API error: ${result.status} ${result.statusText}`);
+			return {
+				status: "error",
+				message: "サーバーエラーが発生しました",
+			};
+		}
+
+		return { status: "success", message: "OK" };
+	} catch (error) {
+		// biome-ignore lint/nursery/noConsole: サーバーサイドでのエラーログ出力のため
+		console.error("Contact form submission error:", error);
 		return {
 			status: "error",
-			message: "お問い合わせに失敗しました",
+			message: "送信に失敗しました。しばらくしてから再度お試しください。",
 		};
 	}
-
-	return { status: "success", message: "OK" };
 }
