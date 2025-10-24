@@ -16,16 +16,20 @@ export function WorksDetail({ title, description }: WorkDetails) {
 		<Box>
 			<Title order={2}>{title}</Title>
 			{/* biome-ignore lint/nursery/useJsxKeyInIterable: <explanation> */}
-			{descriptionKeys.map((key) => (
-				<div>
-					<Title key={key} order={4} mt="sm">
-						{workDetailsTitleData[0][key]}
-					</Title>
-					<Text key={key} mb="sm">
-						{description[key]}
-					</Text>
-				</div>
-			))}
+			{descriptionKeys.map((key) => {
+				if (!description[key]) return null;
+
+				return (
+					<div>
+						<Title key={key} order={4} mt="sm">
+							{workDetailsTitleData[0][key]}
+						</Title>
+						<Text key={key} mb="sm">
+							{description[key]}
+						</Text>
+					</div>
+				);
+			})}
 		</Box>
 	);
 }

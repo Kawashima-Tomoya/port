@@ -18,10 +18,10 @@ export const repositoriesData: Repositories[] = [
 	},
 	{
 		workId: 4,
-		href: "https://github.com/Kawashima-Tomoya/Blog",
+		href: "https://github.com/Kawashima-Tomoya/gallery",
 	},
 	{
 		workId: 5,
-		href: "https://github.com/Kawashima-Tomoya/",
+		href: "https://github.com/Kawashima-Tomoya/AI-fortune",
 	},
 ] as const;

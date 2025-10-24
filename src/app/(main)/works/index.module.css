@@ -1,7 +1,8 @@
 .img {
-   overflow: hidden;
-  transition: transform .3s ease;
-  &:hover{
-    transform: scale(1.1)
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  object-position: 50% 0%;
+  &:hover {
+    transform: scale(1.1);
   }
 }
