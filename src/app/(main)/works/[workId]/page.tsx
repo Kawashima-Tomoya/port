@@ -1,5 +1,6 @@
-import { Anchor, Container, Space, Text } from "@mantine/core";
+import { Anchor, Container, Space } from "@mantine/core";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 import { Repository } from "~/components/page/Repository";
 import { repositoriesData } from "~/components/page/Repository/data";
 import { UsedLanguageIcon } from "~/components/page/UsedLanguageIcons";
@@ -19,14 +20,19 @@ type Props = {
 
 export default function Page(props: Props) {
 	const workId = Number(props.params.workId);
+
+	if (Number.isNaN(workId)) {
+		notFound();
+	}
+
 	const imageLink = imageLinksData.find((link) => link.workId === workId);
 	const workDetail = workDetailsData.find(
 		(workDetail) => workDetail.workId === workId,
 	);
 	const repository = repositoriesData.find((href) => href.workId === workId);
 
-	if (!workDetail) {
-		return <Text>詳細が見つかりませんでした。</Text>;
+	if (!workDetail || !imageLink) {
+		notFound();
 	}
 
 	return (
@@ -35,10 +41,10 @@ export default function Page(props: Props) {
 				⇦ 一覧へ
 			</LinkButton>
 			<Space h="xs" />
-			<Anchor href={imageLink?.href} target="_blank" rel="noopener noreferrer">
+			<Anchor href={imageLink.href} target="_blank" rel="noopener noreferrer">
 				<Image
-					src={imageLink?.src ?? "/no-image.png"}
-					alt={imageLink?.alt ?? ""}
+					src={imageLink.src}
+					alt={imageLink.alt}
 					fill={true}
 					className={c.image}
 					priority={true}
