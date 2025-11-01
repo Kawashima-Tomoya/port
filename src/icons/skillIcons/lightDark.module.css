@@ -1,16 +1,16 @@
 .dark {
   display: none;
-  fill: #000;
+  fill: #fff;
 }
 
 .light {
   display: block;
-  fill: #fff;
+  fill: #000;
 }
 
 [data-mantine-color-scheme="dark"] .dark {
   display: block;
-  fill: #000;
+  fill: #fff;
 }
 
 [data-mantine-color-scheme="dark"] .light {
@@ -23,5 +23,5 @@
 
 [data-mantine-color-scheme="light"] .light {
   display: block;
-  fill: #fff;
+  fill: #000;
 }

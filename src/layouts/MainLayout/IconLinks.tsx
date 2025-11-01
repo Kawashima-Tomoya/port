@@ -2,16 +2,17 @@
 
 import { Anchor, Box, SimpleGrid } from "@mantine/core";
 import { ActionThemeIcon } from "~/components/Theme/ActionThemeIcon";
-import { AppleSvg } from "~/icons/linkIcons/AppleSvg";
+
 import { GithubSvg } from "~/icons/linkIcons/GithubSvg";
 import { XiconSvg } from "~/icons/linkIcons/XiconSvg";
+import { Zenn } from "~/icons/linkIcons/ZennSvg";
 import c from "./IconLinks.module.css";
 
 export function IconLinks() {
 	const iconLinks = [
-		{ href: "https://x.com/home", component: XiconSvg },
 		{ href: "https://github.com/Kawashima-Tomoya", component: GithubSvg },
-		{ href: "https://www.apple.com/", component: AppleSvg },
+		{ href: "https://zenn.dev/shimakawa", component: Zenn },
+		{ href: "https://x.com/home", component: XiconSvg },
 	] as const;
 
 	return (
