@@ -1,17 +1,27 @@
-import { Avatar, Container, Group, Space, Text, Title } from "@mantine/core";
-import { CopyBtn } from "~/components/ui/CopyButton";
-import { LinkButton } from "~/components/ui/LinkButton";
+import {
+	Avatar,
+	Container,
+	Flex,
+	Group,
+	Space,
+	Text,
+	Title,
+} from "@mantine/core";
 import { BorderContainer } from "~/components/ui/StyledContainer/BorderContainer";
 import {
 	CSS,
 	Figma,
 	Github,
 	HTML,
+	Illustrator,
 	Java,
 	JavaScript,
 	Mantine,
 	Nextjs,
+	Photoshop,
+	Premiere,
 	React,
+	Shadcn,
 	Slack,
 	TailwindCss,
 	TypeScript,
@@ -23,36 +33,33 @@ export default function Page() {
 		<Container p="0">
 			<Title order={2}>Profile</Title>
 			<BorderContainer>
-				<Title order={3} mb="xs">
-					About Me
-				</Title>
-				<Group>
+				<Flex gap="xl" align="center" py="xs" mb="sm">
 					<Avatar size="xl" radius="50%" src="/me.webp" alt="it's me" />
 					<Text>
-						北海道札幌市出身の27歳
-						<br /> フロントエンドの技術が好きで独学で勉強してます！
-						<br /> 色々やってみたいタイプの人間です。
-						<br /> 趣味は映画・アニメ鑑賞、服やスニーカーも好きです。。
-						<br /> 最近は筋トレを始めました！💪
+						出身：北海道札幌市
+						<br />
+						年齢：27歳
+						<br />
+						性別：男性
 					</Text>
-				</Group>
-
-				<Space h="lg" />
-
-				<Title order={3} mb="xs">
-					Contact
-				</Title>
+				</Flex>
 				<Group>
-					<CopyBtn
-						value="57kawashima@gmail.com"
-						timeout={3000}
-						variant="light"
-						copiedText="メールアドレスをコピーしました★"
-						unCopiedText="メールはこちら！"
-						copiedColor="var(--mantine-color-red-text)"
-						unCopiedColor="var(--mantine-color-text)"
-					/>
-					<LinkButton href="/contact">お問い合わせフォーム</LinkButton>
+					<Title order={3}>About Me</Title>
+					<Text>
+						フロントエンドの技術に関心があり、オンラインサロンに加入するなどして独学で日々学習を続けています。
+						<br />
+						現在は、「東京デジタルアカデミー 若手エンジニアコース
+						リスキリングプログラム」を受講しており、「アプリ開発分野（React
+						）」のカリキュラムをこなし、スキルアップを図っています。
+					</Text>
+					<Text>
+						訓練校で学習したデザインの知識も活かして、UI/UXに配慮した使いやすいサイト作りを心がけています。
+					</Text>
+					<Text>
+						服やスニーカーが好きで、毎週リリースされる新作は必ずチェックしています。　
+						ゲームやアニメなどのサブカルチャーも好きで、家でのんびり過ごすことが多いです。
+						最近は筋トレを始め、ジムに通っています！💪
+					</Text>
 				</Group>
 			</BorderContainer>
 
@@ -77,6 +84,7 @@ export default function Page() {
 					<Nextjs />
 					<TailwindCss />
 					<Mantine />
+					<Shadcn />
 				</Group>
 
 				<Title order={3} mt="lg">
@@ -84,7 +92,10 @@ export default function Page() {
 				</Title>
 				<Group mt="xs">
 					<VisualStudioCode />
+					<Photoshop />
+					<Illustrator />
 					<Figma />
+					<Premiere />
 					<Github />
 					<Slack />
 				</Group>
