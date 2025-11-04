@@ -17,3 +17,6 @@ export * from "~/icons/skillIcons/SassSvg";
 export * from "~/icons/skillIcons/V0Svg";
 export * from "~/icons/skillIcons/ESLintSvg";
 export * from "~/icons/skillIcons/ShadcnSvg";
+export * from "~/icons/skillIcons/PhotoshopSvg";
+export * from "~/icons/skillIcons/IllustratorSvg";
+export * from "~/icons/skillIcons/PremiereSvg";
