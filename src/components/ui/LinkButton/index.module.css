@@ -1,17 +1,15 @@
 .button {
-  color: var(--mantine-color-text);
   background-color: light-dark(
     var(--mantine-color-lightBlue-1),
     var(--mantine-color-dark-7)
   );
-  &:hover{
-    color: var(--mantine-color-text);
+  &:hover {
     background-color: light-dark(
       var(--mantine-color-lightBlue-3),
       var(--mantine-color-dark-8)
     );
   }
-  &:active{
+  &:active {
     color: var(--mantine-color-red-text);
   }
 }
