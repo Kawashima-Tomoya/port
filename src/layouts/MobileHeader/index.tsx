@@ -10,7 +10,7 @@ const links = [
 	{ href: "/about", label: "About" },
 ] as const;
 
-export function NavigationLinks() {
+export function MobileHeader() {
 	return (
 		<header className={c.header}>
 			<Container className={c.container}>
