@@ -10,7 +10,7 @@ const links = [
 	{ href: "/about", label: "About" },
 ] as const;
 
-export function Header() {
+export function NavigationLinks() {
 	return (
 		<header className={c.header}>
 			<Container className={c.container}>
