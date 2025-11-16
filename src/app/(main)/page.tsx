@@ -34,7 +34,10 @@ export default function Page() {
 				</Title>
 				<Text fw={700}>希望職種</Text>
 				<Text>フロントエンドエンジニア（フルタイム）</Text>
-				<Text>経験：React / Next.js / TypeScript（個人開発中心）</Text>
+				<Text fw={700} mt="xs">
+					経験
+				</Text>
+				<Text>React / Next.js / TypeScript（個人開発中心）</Text>
 				<Title order={4} my="xs">
 					訓練校制作物掲載サイト
 				</Title>
