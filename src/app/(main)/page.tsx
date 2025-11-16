@@ -10,7 +10,9 @@ import {
 import { Stars } from "~/components/page/Stars/Stars";
 import { CopyBtn } from "~/components/ui/CopyButton";
 import { LinkButton } from "~/components/ui/LinkButton";
+import { LinkCard } from "~/components/ui/LinkCard";
 import { BorderContainer } from "~/components/ui/StyledContainer/BorderContainer";
+import galleryImg from "../../../public/gallery.webp";
 
 export default function Page() {
 	return (
@@ -30,11 +32,19 @@ export default function Page() {
 				<Title order={2} mb="xs">
 					Quick facts
 				</Title>
-				<Text>希望職種：フロントエンドエンジニア（フルタイム）</Text>
+				<Text fw={700}>希望職種</Text>
+				<Text>フロントエンドエンジニア（フルタイム）</Text>
 				<Text>経験：React / Next.js / TypeScript（個人開発中心）</Text>
-				<Text>
-					主要実績：ポートフォリオ内「AI占い」「ポートフォリオサイト」（下にリンク）{" "}
-				</Text>
+				<Title order={4} my="xs">
+					訓練校制作物掲載サイト
+				</Title>
+				<LinkCard
+					href="https://gallery-eta-blue.vercel.app"
+					image={galleryImg}
+					imageAlt="gallery"
+					priority={true}
+					title="訓練校制作物掲載サイト"
+				/>
 			</BorderContainer>
 
 			<Space h="lg" />
