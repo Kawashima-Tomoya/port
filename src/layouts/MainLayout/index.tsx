@@ -4,13 +4,13 @@ import { Footer } from "~/layouts/Footer";
 import { IconLinks } from "~/layouts/MainLayout/IconLinks";
 import { SideNav } from "~/layouts/MainLayout/SideNav";
 import { theme } from "~/layouts/MantineTheme/theme";
-import { NavigationLinks } from "~/layouts/NavigationLinks";
+import { MobileHeader } from "~/layouts/MobileHeader";
 import c from "./index.module.css";
 
 export function MainLayout({ children }: { children: ReactNode }) {
 	return (
 		<MantineProvider theme={theme}>
-			<NavigationLinks />
+			<MobileHeader />
 			<Container className={c.container}>
 				<Flex justify="center" gap="lg" className={c.mainContainer}>
 					<Stack gap="xs" className={c.side}>

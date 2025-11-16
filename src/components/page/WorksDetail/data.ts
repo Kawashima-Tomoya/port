@@ -36,10 +36,10 @@ export const imageLinksData: ImageLinks[] = [
 	},
 	{
 		workId: 2,
-		src: "/microcms.webp",
-		alt: "microcms",
-		title: "架空コーポレートサイト",
-		href: "https://headless-cms-lac.vercel.app",
+		src: "/gallery.webp",
+		alt: "gallery",
+		title: "職業訓練作品の掲載ページ",
+		href: "https://gallery-eta-blue.vercel.app",
 	},
 	{
 		workId: 3,
@@ -50,12 +50,11 @@ export const imageLinksData: ImageLinks[] = [
 	},
 	{
 		workId: 4,
-		src: "/gallery.webp",
-		alt: "gallery",
-		title: "職業訓練作品の掲載ページ",
-		href: "https://gallery-eta-blue.vercel.app",
+		src: "/microcms.webp",
+		alt: "microcms",
+		title: "架空コーポレートサイト",
+		href: "https://headless-cms-lac.vercel.app",
 	},
-
 	{
 		workId: 5,
 		src: "/AI-fortune.webp",
@@ -93,15 +92,15 @@ export const workDetailsData: WorkDetails[] = [
 	},
 	{
 		workId: 2,
-		title: "microCMSを使用した架空コーポレートサイト",
+		title: "職業訓練作品の掲載ページ",
 		description: {
-			main: "「Next.js+ヘッドレスCMSではじめる!かんたんモダンWebサイト制作入門」という本を参考に、独自でTailwindCSSとBiomeを使用して制作しました。ただコードを書き写すのではなく、まず解説を読み自分なりのコードを書いて、その後修正する方式で実装しました。",
+			main: "訓練校で制作した作品をまとめたギャラリーページです。",
 			motive:
-				"書籍で基礎から丁寧に学習したいと思い制作に至りました。また、Web制作の分野で流行りつつあるHeadlessCMSについても学習できるものを選択しました。",
-			feature: "書籍の内容を忠実に再現し実装しました。",
-			design: "デザインもそのまま再現しました。",
-			doNot:
-				"機能の追加: 基礎をしっかり理解することを重視し、機能の追加やカスタマイズは行いませんでした。",
+				"今回の職業訓練ではコーディングだけでなくデザインや動画編集、マーケティング、AIツールの活用方法など幅広く学習したため、それらをまとめて掲載できるサイトを作成しました。",
+			feature:
+				"学習内容の幅広さから見やすさを考慮してフィルタリング機能を実装しました。",
+			design:
+				"幅広いことを学び、多くの人と関わることのできた訓練校をイメージし、カラフルでポップな動きのあるデザインにしました。動きは、mo.jsとmotionを使用しアニメーションを実装しました。",
 		},
 	},
 	{
@@ -121,18 +120,17 @@ export const workDetailsData: WorkDetails[] = [
 	},
 	{
 		workId: 4,
-		title: "職業訓練作品の掲載ページ",
+		title: "microCMSを使用した架空コーポレートサイト",
 		description: {
-			main: "訓練校で作成した作品をまとめたギャラリーページです。",
+			main: "「Next.js+ヘッドレスCMSではじめる!かんたんモダンWebサイト制作入門」という本を参考に、独自でTailwindCSSとBiomeを使用して制作しました。ただコードを書き写すのではなく、まず解説を読み自分なりのコードを書いて、その後修正する方式で実装しました。",
 			motive:
-				"今回の職業訓練ではコーディングだけでなくデザインや動画編集、マーケティング、AIツールの活用方法など幅広く学習したため、それらをまとめて掲載しました。",
-			feature:
-				"mo.jsとmotionを使用したアニメーション: mo.jsとmotionを組み合わせて、動きのあるギャラリーページにしました。",
-			design:
-				"幅広いことを学び、多くの人と関わることのできる訓練校をイメージし、カラフルでポップなデザインにしました。",
+				"書籍で基礎から丁寧に学習したいと思い制作に至りました。また、Web制作の分野で流行りつつあるHeadlessCMSについても学習できるものを選択しました。",
+			feature: "書籍の内容を忠実に再現し実装しました。",
+			design: "デザインもそのまま再現しました。",
+			doNot:
+				"機能の追加: 基礎をしっかり理解することを重視し、機能の追加やカスタマイズは行いませんでした。",
 		},
 	},
-
 	{
 		workId: 5,
 		title: "AI占いアプリ",

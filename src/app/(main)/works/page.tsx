@@ -1,4 +1,4 @@
-import { Box, Container, Image, SimpleGrid } from "@mantine/core";
+import { Box, Container, Image, SimpleGrid, Title } from "@mantine/core";
 import Link from "next/link";
 import { imageLinksData } from "~/components/page/WorksDetail/data";
 import c from "./index.module.css";
@@ -18,6 +18,9 @@ export default function Page() {
 								height={200}
 								className={c.img}
 							/>
+							<Title order={4} className={c.title}>
+								{imageLink.title}
+							</Title>
 						</Link>
 						{/* <Title order={4}>{imageLink.title}</Title> */}
 					</Box>
