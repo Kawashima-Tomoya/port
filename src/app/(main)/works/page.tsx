@@ -10,7 +10,7 @@ export default function Page() {
 				{/* biome-ignore lint/nursery/useJsxKeyInIterable: <explanation> */}
 				{imageLinksData.map((imageLink) => (
 					<Box>
-						<Link key={imageLink.alt} href={`works/${imageLink.workId}`}>
+						<Link key={imageLink.alt} href={`works/${imageLink.workId}`} className={c.link}>
 							<Image
 								src={imageLink.src}
 								alt={imageLink.alt}
