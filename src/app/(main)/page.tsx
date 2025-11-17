@@ -38,7 +38,13 @@ export default function Page() {
 					経験
 				</Text>
 				<Text>React / Next.js / TypeScript（個人開発中心）</Text>
-				<Title order={4} my="xs">
+				<Text>フロントエンドエンジニア（フルタイム）</Text>
+				<Text fw={700} mt="xs">
+					強み
+				</Text>
+				<Text>UI/UXを意識した実装が得意。自走して学習し改善するタイプ。</Text>
+
+				<Title order={4} my="sm">
 					訓練校制作物掲載サイト
 				</Title>
 				<LinkCard
