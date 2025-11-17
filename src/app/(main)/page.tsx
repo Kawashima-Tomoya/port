@@ -63,7 +63,7 @@ export default function Page() {
 					Contact
 				</Title>
 				<Group>
-					<LinkButton href="/contact" size="md" variant="filled">
+					<LinkButton href="/contact" size="md" variant="subtle">
 						お問い合わせフォーム
 					</LinkButton>
 					<CopyBtn
