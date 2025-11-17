@@ -34,11 +34,11 @@ export default function Page() {
 				</Title>
 				<Text fw={700}>希望職種</Text>
 				<Text>フロントエンドエンジニア（フルタイム）</Text>
+				<Text size="sm">いずれバックエンドもできるようになりたい。</Text>
 				<Text fw={700} mt="xs">
 					経験
 				</Text>
 				<Text>React / Next.js / TypeScript（個人開発中心）</Text>
-				<Text>フロントエンドエンジニア（フルタイム）</Text>
 				<Text fw={700} mt="xs">
 					強み
 				</Text>
